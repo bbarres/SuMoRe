@@ -1,16 +1,23 @@
 ###############################################################################
 ###############################################################################
-#Code for the figure
+#Code for the Venn diagram figures
 ###############################################################################
 ###############################################################################
 
 #loading the packages necessary for the analysis
-library(visreg)
-library(lme4)
+library(eulerr)
+
 
 
 ###############################################################################
 #loading and preparing the AOX resistance data
 ###############################################################################
 
-#we load the raw data
+fit<-euler(c(A=12,B=20,C=62,"A&B"=3,
+      "A&C"=4,"B&C"=7,"A&B&C"=2))
+plot(fit,quantities=TRUE)
+plot(fit,quantities=TRUE,col=c("red","green","blue"),lwd=4,cex=4,
+     labels=c("Academic","Private","Public"))
+
+
+
