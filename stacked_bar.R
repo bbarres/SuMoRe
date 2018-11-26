@@ -24,7 +24,7 @@ row.names(IDH_coex)<-c("Academic","Academic and Private",
                        "Private","Academic and Public",
                        "Public","Academic, Private and Public",
                        "Public and Private")
-IDH_coex<-IDH_coex[c(3,2,1,4,7,5,6),]
+IDH_coex<-IDH_coex[c(6,2,4,7,3,1,5),]
 effectif<-colSums(IDH_coex)
 effectif
 IDH_coex<-prop.table(IDH_coex,margin=2)*100
@@ -50,6 +50,6 @@ par(mar=c(0,0,0,0))
 # c(bottom, left, top, right)
 plot.new()
 legend('center','groups',legend=row.names(IDH_coex),
-       fill=colovec,bty ="n",horiz=FALSE,ncol=2)
+       fill=colovec,bty ="n",horiz=FALSE,ncol=2,x.intersp)
 par(op)
 
