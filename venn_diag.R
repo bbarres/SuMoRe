@@ -30,7 +30,7 @@ plot(fit,
      quantities=list(col=c("black"),cex=1.3,font=3),
      edges=list(col=colovec,lwd=7),
      labels=list(col=colovec,cex=1.4),
-     fills=list(fill=colovec,alpha=0.2),
+     fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
 
 
