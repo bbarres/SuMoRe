@@ -7,6 +7,7 @@
 #loading the packages necessary for the analysis
 library(eulerr)
 library(RColorBrewer)
+source("dataloading.R")
 
 
 ###############################################################################

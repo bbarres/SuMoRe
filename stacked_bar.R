@@ -33,22 +33,22 @@ IDH_coex<-prop.table(IDH_coex,margin=2)*100
 
 
 layout(cbind(1,2),widths=c(9,2))  # put legend on bottom 1/8th of the chart
-op<-par(mar=c(6.1,6.1,2,0))
+op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=0.7,xpd=FALSE)
 axis(1,at=temp,labels=FALSE,lwd=4,font=2,
-     cex.axis=0.8,padj=0.1,xpd=TRUE,las=1)
+     cex.axis=1.1,padj=0.1,xpd=TRUE,las=1)
 text(temp,par("usr")[1]-10,labels=names(effectif),srt=25,
-     xpd=TRUE,cex=1.1,font=2)
-axis(2,lwd=4,font=2,cex.axis=1.1,las=1)
+     xpd=TRUE,cex=1.2,font=2)
+axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
 title(main=NULL,xlab="IDH class",ylab="Percentage of countries",cex.lab=2,
-      line=4)
-text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.5,xpd=TRUE)
-text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.5,xpd=TRUE)
-text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.5,xpd=TRUE)
-text(temp[4],104,paste("n=",effectif[4],sep=""),font=3,cex=1.5,xpd=TRUE)
-text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.5,xpd=TRUE)
+      line=3.5,font.lab=2)
+text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.3,xpd=TRUE)
+text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.3,xpd=TRUE)
+text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.3,xpd=TRUE)
+text(temp[4],104,paste("n=",effectif[4],sep=""),font=3,cex=1.3,xpd=TRUE)
+text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.3,xpd=TRUE)
 
 par(mar=c(4.1,0,0,0))
 # c(bottom, left, top, right)
