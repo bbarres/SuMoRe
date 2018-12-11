@@ -115,9 +115,9 @@ PPPsurv_coex<-table(data_pays$coexistence_pays,
 PPPsurv_coex<-PPPsurv_coex[-c(2),-c(2)]
 colnames(PPPsurv_coex)<-c("Not\nmonitored","Sales","Sales and\nSurveys")
 row.names(PPPsurv_coex)<-c("Academic","Academic\nPrivate",
-                       "Private","Academic\nPublic",
-                       "Public","Academic\nPrivate\nPublic",
-                       "Public\nPrivate")
+                           "Private","Academic\nPublic",
+                           "Public","Academic\nPrivate\nPublic",
+                           "Public\nPrivate")
 PPPsurv_coex<-PPPsurv_coex[c(3,1,5,7,4,2,6),]
 effectif<-colSums(PPPsurv_coex)
 effectif
@@ -145,6 +145,52 @@ text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
 par(mar=c(4.1,0,0,0))
 plot.new()
 legend('topleft',legend=row.names(PPPsurv_coex),border="transparent",
+       fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
+par(op)
+
+
+###############################################################################
+#Figure 11: relation between type of resistance monitoring and type of pest
+###############################################################################
+
+colovec<-brewer.pal(6,"Paired")[1:6]
+
+#formating the table necessary for the table
+repond_pestcat<-table(data_monitoring$bioag_surv_monitoring_comb,
+                      data_monitoring$type_monitoring_par_repondant)
+#wer remove the NA class
+repond_pestcat<-repond_pestcat[-c(7),]
+row.names(repond_pestcat)<-c("Insects","Weeds","Fungi",
+                             "Fungi\nInsects","Fungi\nWeeds",
+                             "Fungi\nInsects\nWeeds")
+repond_pestcat<-repond_pestcat[,c(1,3,2)]
+effectif<-colSums(repond_pestcat)
+effectif
+repond_pestcat<-prop.table(repond_pestcat,margin=2)*100
+repond_pestcat
+
+layout(cbind(1,2),widths=c(9,2))  # put legend on bottom 1/8th of the chart
+op<-par(mar=c(6.1,5.1,2,0))
+temp<-barplot(repond_pestcat,col=colovec,border=NA,axes=FALSE,
+              axisnames=FALSE,space=1.5,xpd=FALSE)
+axis(1,at=temp,labels=FALSE,lwd=4,font=2,
+     cex.axis=1.1,padj=0.1,xpd=TRUE,las=1)
+text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
+     xpd=TRUE,cex=1.2,font=2)
+axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
+box(bty="l",lwd=4)
+title(main=NULL,xlab="Type of monitoring",ylab="Percentage of monitoring",
+      cex.lab=2,
+      line=3.5,font.lab=2)
+text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[4],104,paste("n=",effectif[4],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
+
+par(mar=c(4.1,0,0,0))
+plot.new()
+legend('topleft',legend=row.names(repond_pestcat),border="transparent",
        fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
 par(op)
 
