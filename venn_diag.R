@@ -11,7 +11,7 @@ source("dataloading.R")
 
 
 ###############################################################################
-#loading and preparing the AOX resistance data
+#Figure 12: Venn Diagram
 ###############################################################################
 
 #building the contingency table
