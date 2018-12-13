@@ -194,3 +194,7 @@ legend('topleft',legend=row.names(repond_pestcat),border="transparent",
        fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
 par(op)
 
+
+###############################################################################
+#END
+###############################################################################

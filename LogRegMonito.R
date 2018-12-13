@@ -1,15 +1,22 @@
 ###############################################################################
 ###############################################################################
-#Loading the datasets
+#Code for the stacked barplot
 ###############################################################################
 ###############################################################################
 
+#loading the packages necessary for the analysis
+library(RColorBrewer)
+library(visreg)
+source("dataloading.R")
 
-data_pays<-read.csv2(file="data/20181211_data_pays.csv",header=TRUE)
 
-data_repondants<-read.csv2(file="data/20181114_data_repondant.csv",header=TRUE)
+###############################################################################
+#Logistic regression on the existence of the different type of monitoring
+###############################################################################
 
-data_monitoring<-read.csv2(file="data/20181121_data_monitoring.csv",header=TRUE)
+
+
+
 
 
 ###############################################################################
