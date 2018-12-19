@@ -56,6 +56,8 @@ legend('topleft',legend=row.names(IDH_coex),border="transparent",
        fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
 par(op)
 
+#export to a pdf 6 x 5 inches
+
 
 ###############################################################################
 #Figure 4: relation between IDH and PPP use type of monitoring
@@ -101,6 +103,8 @@ legend('left',legend=row.names(IDH_PPPsurv),border="transparent",
        fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
 par(op)
 
+#export to a pdf 6 x 5 inches
+
 
 ###############################################################################
 #Figure 5: relation between PPP usage and coexistence of monitoring
@@ -134,8 +138,8 @@ text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="PPP monitoring",ylab="Percentage of countries",cex.lab=2,
-      line=3.5,font.lab=2)
+title(main=NULL,xlab="Survey on pesticide use",ylab="Percentage of countries",
+      cex.lab=2,line=3.5,font.lab=2)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -147,6 +151,8 @@ plot.new()
 legend('topleft',legend=row.names(PPPsurv_coex),border="transparent",
        fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
 par(op)
+
+#export to a pdf 6 x 5 inches
 
 
 ###############################################################################
@@ -193,6 +199,8 @@ plot.new()
 legend('topleft',legend=row.names(repond_pestcat),border="transparent",
        fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
 par(op)
+
+#export to a pdf 6 x 5 inches
 
 
 ###############################################################################

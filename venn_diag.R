@@ -34,6 +34,8 @@ plot(fit,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
 
+#export to a pdf 6 x 5 inches
+
 
 ###############################################################################
 #END
