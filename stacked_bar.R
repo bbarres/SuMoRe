@@ -42,7 +42,7 @@ text(temp,par("usr")[1]-10,labels=names(effectif),srt=25,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="IDH class",ylab="Percentage of countries",cex.lab=2,
+title(main=NULL,xlab="IDH class",ylab="% of countries",cex.lab=2,
       line=3.5,font.lab=2)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -89,7 +89,7 @@ text(temp,par("usr")[1]-10,labels=names(effectif),srt=25,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="IDH class",ylab="Percentage of countries",cex.lab=2,
+title(main=NULL,xlab="IDH class",ylab="% of countries",cex.lab=2,
       line=3.5,font.lab=2)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -138,7 +138,7 @@ text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="Survey on pesticide use",ylab="Percentage of countries",
+title(main=NULL,xlab="Survey on pesticide use",ylab="% of countries",
       cex.lab=2,line=3.5,font.lab=2)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -185,7 +185,8 @@ text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="Type of monitoring",ylab="Percentage of monitoring",
+title(main=NULL,xlab="Category of monitoring systems",
+      ylab="% of monitoring system",
       cex.lab=2,
       line=3.5,font.lab=2)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
