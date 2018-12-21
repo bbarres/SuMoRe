@@ -22,11 +22,14 @@ print(paste("Total number of evaluated monitoring =",sum(div_fin)))
 print(paste("Missing data = ",div_fin[7]))
 
 #chosing a set of colors
-colovec<-brewer.pal(6,"Paired")[1:3]
+colovec<-brewer.pal(6,"Paired")[c(1,3,6)]
 
+#you need to run the 'euler' function several time in order to obtain a figure 
+#close to the one in the manuscript, because the optimisation process leeds 
+#to different solution each time
 fit<-euler(c(Insects=36,Weeds=68,Fungi=52,"Insects&Fungi"=4,
-      "Weeds&Fungi"=2,"Insects&Weeds"=0,"Insects&Weeds&Fungi"=16))
-plot(fit,quantities=TRUE)
+      "Weeds&Fungi"=2,"Insects&Weeds"=0,"Insects&Weeds&Fungi"=16),
+      shape=c("ellipse"),control=list(extraopt_threshold=0))
 plot(fit,
      quantities=list(col=c("black"),cex=1.3,font=3),
      edges=list(col=colovec,lwd=7),
@@ -52,8 +55,8 @@ print(paste("Missing data = ",div_fin[1]))
 colovec<-brewer.pal(3,"Dark2")
 
 fit<-euler(c(Academic=23,Public=36,Private=55,"Academic&Public"=7,
-             "Academic&Private"=5,"Public&Private"=36,"Academic&Public&Private"=12))
-plot(fit,quantities=TRUE)
+             "Academic&Private"=5,"Public&Private"=36,
+             "Academic&Public&Private"=12))
 plot(fit,
      quantities=list(col=c("black"),cex=1.3,font=3),
      edges=list(col=colovec,lwd=7),
