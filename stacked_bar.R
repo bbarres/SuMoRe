@@ -138,8 +138,8 @@ text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="Survey on pesticide use",ylab="% of countries",
-      cex.lab=2,line=3.5,font.lab=2)
+title(main=NULL,xlab="collection of PPP usage data",ylab="% of countries",
+      cex.lab=2,line=3.5,font.lab=2,xpd=NA)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -159,7 +159,7 @@ par(op)
 #Figure 11: relation between type of resistance monitoring and type of pest
 ###############################################################################
 
-colovec<-brewer.pal(6,"Paired")[1:6]
+colovec<-brewer.pal(6,"Paired")[c(1,3,6,2,4,5)]
 
 #formating the table necessary for the table
 repond_pestcat<-table(data_monitoring$bioag_surv_monitoring_comb,
@@ -185,10 +185,9 @@ text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="Category of monitoring systems",
-      ylab="% of monitoring system",
-      cex.lab=2,
-      line=3.5,font.lab=2)
+title(main=NULL,xlab=list("Category of monitoring systems",cex=2),
+      ylab=list("% of monitoring systems",cex=2),
+      line=3.5,font.lab=2,xpd=NA)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
