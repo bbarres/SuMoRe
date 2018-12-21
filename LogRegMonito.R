@@ -116,6 +116,8 @@ visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
        legend=FALSE,ylim=c(0,1),main=list("Survey",cex=2))
 par(op)
 
+#export to a pdf 9.33 x 5 inches
+
 
 ###############################################################################
 #END
