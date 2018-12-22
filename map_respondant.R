@@ -40,7 +40,7 @@ sPDF <- joinCountryData2Map(data_country_total
 sPDF <- spTransform(sPDF, CRS=CRS("+proj=robin +ellps=WGS84"))
 
 #BB : je n'ai pas compris à quoi ça servait, mais nécessite le package rgeos, 
-#peut-être voir la disctribution des aires ?
+#peut-être pour voir la distribution des aires des différents polygones ?
 plot(gArea(sPDF,byid=TRUE))
 
 #plot map
