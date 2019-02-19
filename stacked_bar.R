@@ -23,16 +23,16 @@ IDH_coex<-IDH_coex[-c(2),]
 colnames(IDH_coex)<-c("[0.5-0.6]","[0.6-0.7]","[0.7-0.8]",
                       "[0.8-0.9]","[0.9-1]")
 row.names(IDH_coex)<-c("Academic","Academic\nPrivate",
-                       "Private","Academic\nGouvernemental",
-                       "Gouvernemental","Academic\nPrivate\nGouvernemental",
-                       "Gouvernemental\nPrivate")
+                       "Private","Academic\nGovernmental",
+                       "Governmental","Academic\nPrivate\nGovernmental",
+                       "Governmental\nPrivate")
 IDH_coex<-IDH_coex[c(3,1,5,7,4,2,6),]
 effectif<-colSums(IDH_coex)
 effectif
 IDH_coex<-prop.table(IDH_coex,margin=2)*100
 IDH_coex
 
-layout(cbind(1,2),widths=c(9,2))  # put legend on bottom 1/8th of the chart
+layout(cbind(1,2),widths=c(9,3))  # put legend on bottom 1/8th of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=0.7,xpd=FALSE)
@@ -119,16 +119,16 @@ PPPsurv_coex<-table(data_pays$coexistence_pays,
 PPPsurv_coex<-PPPsurv_coex[-c(2),-c(2)]
 colnames(PPPsurv_coex)<-c("Not\nmonitored","Sales","Sales and\nSurveys")
 row.names(PPPsurv_coex)<-c("Academic","Academic\nPrivate",
-                           "Private","Academic\nGouvernemental",
-                           "Gouvernemental","Academic\nPrivate\nGouvernemental",
-                           "Gouvernemental\nPrivate")
+                           "Private","Academic\nGovernmental",
+                           "Governmental","Academic\nPrivate\nGovernmental",
+                           "Governmental\nPrivate")
 PPPsurv_coex<-PPPsurv_coex[c(3,1,5,7,4,2,6),]
 effectif<-colSums(PPPsurv_coex)
 effectif
 PPPsurv_coex<-prop.table(PPPsurv_coex,margin=2)*100
 PPPsurv_coex
 
-layout(cbind(1,2),widths=c(9,2))  # put legend on bottom 1/8th of the chart
+layout(cbind(1,2),widths=c(9,3))  # put legend on bottom 1/8th of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(PPPsurv_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
