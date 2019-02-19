@@ -10,7 +10,7 @@ source("dataloading.R")
 
 
 ###############################################################################
-#Figure 3: relation between IDH and organization of reistance monitoring
+#Figure 3: relation between HDI and organization of reistance monitoring
 ###############################################################################
 
 colovec<-brewer.pal(7,"Dark2")[7:1]
@@ -23,9 +23,9 @@ IDH_coex<-IDH_coex[-c(2),]
 colnames(IDH_coex)<-c("[0.5-0.6]","[0.6-0.7]","[0.7-0.8]",
                       "[0.8-0.9]","[0.9-1]")
 row.names(IDH_coex)<-c("Academic","Academic\nPrivate",
-                       "Private","Academic\nPublic",
-                       "Public","Academic\nPrivate\nPublic",
-                       "Public\nPrivate")
+                       "Private","Academic\nGouvernemental",
+                       "Gouvernemental","Academic\nPrivate\nGouvernemental",
+                       "Gouvernemental\nPrivate")
 IDH_coex<-IDH_coex[c(3,1,5,7,4,2,6),]
 effectif<-colSums(IDH_coex)
 effectif
@@ -42,7 +42,7 @@ text(temp,par("usr")[1]-10,labels=names(effectif),srt=25,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="IDH class",ylab="% of countries",cex.lab=2,
+title(main=NULL,xlab="HDI class",ylab="% of countries",cex.lab=2,
       line=3.5,font.lab=2)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -89,7 +89,7 @@ text(temp,par("usr")[1]-10,labels=names(effectif),srt=25,
      xpd=TRUE,cex=1.2,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
-title(main=NULL,xlab="IDH class",ylab="% of countries",cex.lab=2,
+title(main=NULL,xlab="HDI class",ylab="% of countries",cex.lab=2,
       line=3.5,font.lab=2)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -119,9 +119,9 @@ PPPsurv_coex<-table(data_pays$coexistence_pays,
 PPPsurv_coex<-PPPsurv_coex[-c(2),-c(2)]
 colnames(PPPsurv_coex)<-c("Not\nmonitored","Sales","Sales and\nSurveys")
 row.names(PPPsurv_coex)<-c("Academic","Academic\nPrivate",
-                           "Private","Academic\nPublic",
-                           "Public","Academic\nPrivate\nPublic",
-                           "Public\nPrivate")
+                           "Private","Academic\nGouvernemental",
+                           "Gouvernemental","Academic\nPrivate\nGouvernemental",
+                           "Gouvernemental\nPrivate")
 PPPsurv_coex<-PPPsurv_coex[c(3,1,5,7,4,2,6),]
 effectif<-colSums(PPPsurv_coex)
 effectif
