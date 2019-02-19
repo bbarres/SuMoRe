@@ -15,7 +15,7 @@ source("dataloading.R")
 
 colovec<-brewer.pal(7,"Dark2")[7:1]
 
-#formating the table necessary for the table
+#formating the table necessary for the ploting
 IDH_coex<-table(data_pays$coexistence_pays,
                 data_pays$Indice.Dvpt.Humain_classes)
 #wer remove the NA class
@@ -32,7 +32,7 @@ effectif
 IDH_coex<-prop.table(IDH_coex,margin=2)*100
 IDH_coex
 
-layout(cbind(1,2),widths=c(9,3))  # put legend on bottom 1/8th of the chart
+layout(cbind(1,2),widths=c(9,3))  #put legend on the right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=0.7,xpd=FALSE)
@@ -79,7 +79,7 @@ effectif
 IDH_PPPsurv<-prop.table(IDH_PPPsurv,margin=2)*100
 IDH_PPPsurv
 
-layout(cbind(1,2),widths=c(9,2))  # put legend on bottom 1/8th of the chart
+layout(cbind(1,2),widths=c(9,2))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_PPPsurv,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=0.7,xpd=FALSE)
@@ -128,7 +128,7 @@ effectif
 PPPsurv_coex<-prop.table(PPPsurv_coex,margin=2)*100
 PPPsurv_coex
 
-layout(cbind(1,2),widths=c(9,3))  # put legend on bottom 1/8th of the chart
+layout(cbind(1,2),widths=c(9,3))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(PPPsurv_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
@@ -175,7 +175,7 @@ effectif
 repond_pestcat<-prop.table(repond_pestcat,margin=2)*100
 repond_pestcat
 
-layout(cbind(1,2),widths=c(9,2))  # put legend on bottom 1/8th of the chart
+layout(cbind(1,2),widths=c(9,2))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(repond_pestcat,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
