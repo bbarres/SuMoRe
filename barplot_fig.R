@@ -152,7 +152,7 @@ box(bty="l",lwd=4)
 mtext(levels(LEVEL)[c(1,3,2)],at=c(1.7,6.1,10.6),line=1.5,cex=1.5,side=1)
 mtext("Type of monitoring system", at=6.1, line=3,cex=1.8,side=1,font=2,
       padj=1)
-legend(8,100,legend=c("Academics","Officials","Privates"),y.intersp=2.5,
+legend(6.5,105,legend=c("Academics","Officials","Privates"),y.intersp=2.5,
        pch=15,col=thecol,bg=thecol,bty="n",cex=1.4,pt.cex=1.6,xpd=TRUE)
 par(op)
 
