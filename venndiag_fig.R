@@ -7,6 +7,9 @@
 #loading the packages necessary for the analysis
 library(eulerr)
 library(RColorBrewer)
+library(devtools)
+install_github('johannesbjork/LaCroixColoR')
+library(LaCroixColoR)
 source("dataloading.R")
 
 
@@ -22,7 +25,7 @@ print(paste("Total number of evaluated monitoring =",sum(div_fin)))
 print(paste("Missing data = ",div_fin[7]))
 
 #chosing a set of colors
-colovec<-brewer.pal(6,"Paired")[c(1,3,6)]
+colovec<-colovec<-lacroix_palettes$PassionFruit[1,c(1,3,6)]
 
 #you need to run the 'euler' function several time in order to obtain a figure 
 #close to the one in the manuscript, because the optimisation process leeds 

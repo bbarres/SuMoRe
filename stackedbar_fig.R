@@ -6,6 +6,9 @@
 
 #loading the packages necessary for the analysis
 library(RColorBrewer)
+library(devtools)
+install_github('johannesbjork/LaCroixColoR')
+library(LaCroixColoR)
 source("dataloading.R")
 
 
@@ -24,7 +27,7 @@ colnames(IDH_coex)<-c("[0.5-0.6]","[0.6-0.7]","[0.7-0.8]",
                       "[0.8-0.9]","[0.9-1]")
 row.names(IDH_coex)<-c("Academic","Academic\nPrivate",
                        "Private","Academic\nGovernmental",
-                       "Governmental","Academic\nPrivate\nGovernmental",
+                       "Governmental","Academic\nGovernmental\nPrivate",
                        "Governmental\nPrivate")
 IDH_coex<-IDH_coex[c(3,1,5,7,4,2,6),]
 effectif<-colSums(IDH_coex)
@@ -50,10 +53,11 @@ text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[4],104,paste("n=",effectif[4],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
 
-par(mar=c(4.1,0,0,0))
+par(mar=c(4.1,0.5,0,0))
 plot.new()
-legend('topleft',legend=row.names(IDH_coex),border="transparent",
-       fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
+legend('topleft',legend=row.names(IDH_coex),border="transparent",pch=15,
+       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
+       x.intersp=1.5,y.intersp=5)
 par(op)
 
 #export to a pdf 6 x 5 inches
@@ -63,7 +67,7 @@ par(op)
 #Figure 4: relation between IDH and PPP use type of monitoring
 ###############################################################################
 
-colovec<-brewer.pal(4,"Accent")[1:4]
+colovec<-brewer.pal(9,"Set1")[3:6]
 
 #formating the table necessary for the table
 IDH_PPPsurv<-table(data_pays$q136_q137_UsagePPP,
@@ -99,8 +103,9 @@ text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
 
 par(mar=c(4.1,0,0,0))
 plot.new()
-legend('left',legend=row.names(IDH_PPPsurv),border="transparent",
-       fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
+legend('left',legend=row.names(IDH_PPPsurv),border="transparent",pch=15,
+       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
+       x.intersp=1.5,y.intersp=5)
 par(op)
 
 #export to a pdf 6 x 5 inches
@@ -120,7 +125,7 @@ PPPsurv_coex<-PPPsurv_coex[-c(2),-c(2)]
 colnames(PPPsurv_coex)<-c("Not\nmonitored","Sales","Sales and\nSurveys")
 row.names(PPPsurv_coex)<-c("Academic","Academic\nPrivate",
                            "Private","Academic\nGovernmental",
-                           "Governmental","Academic\nPrivate\nGovernmental",
+                           "Governmental","Academic\nGovernmental\nPrivate",
                            "Governmental\nPrivate")
 PPPsurv_coex<-PPPsurv_coex[c(3,1,5,7,4,2,6),]
 effectif<-colSums(PPPsurv_coex)
@@ -129,13 +134,13 @@ PPPsurv_coex<-prop.table(PPPsurv_coex,margin=2)*100
 PPPsurv_coex
 
 layout(cbind(1,2),widths=c(9,3))  #put legend on a right margin of the chart
-op<-par(mar=c(6.1,5.1,2,0))
+op<-par(mar=c(6.1,5.1,2,0.1))
 temp<-barplot(PPPsurv_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
 axis(1,at=temp,labels=FALSE,lwd=4,font=2,
      cex.axis=1.1,padj=0.1,xpd=TRUE,las=1)
 text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
-     xpd=TRUE,cex=1.2,font=2)
+     xpd=TRUE,cex=1.1,font=2)
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
 title(main=NULL,xlab="collection of PPP usage data",ylab="% of countries",
@@ -146,20 +151,21 @@ text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[4],104,paste("n=",effectif[4],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
 
-par(mar=c(4.1,0,0,0))
+par(mar=c(4.1,0.5,0,0))
 plot.new()
-legend('topleft',legend=row.names(PPPsurv_coex),border="transparent",
-       fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
+legend('topleft',legend=row.names(PPPsurv_coex),border="transparent",pch=15,
+       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
+       x.intersp=1.5,y.intersp=5)
 par(op)
 
 #export to a pdf 6 x 5 inches
 
 
 ###############################################################################
-#Figure 11: relation between type of resistance monitoring and type of pest
+#Figure 3D: relation between type of resistance monitoring and type of pest
 ###############################################################################
 
-colovec<-brewer.pal(6,"Paired")[c(1,3,6,2,4,5)]
+colovec<-lacroix_palettes$PassionFruit[1,c(1,3,6,2,5,4)]
 
 #formating the table necessary for the table
 repond_pestcat<-table(data_monitoring$bioag_surv_monitoring_comb,
@@ -194,10 +200,11 @@ text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[4],104,paste("n=",effectif[4],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
 
-par(mar=c(4.1,0,0,0))
+par(mar=c(4.1,0.5,0,0))
 plot.new()
-legend('topleft',legend=row.names(repond_pestcat),border="transparent",
-       fill=colovec,bty ="n",horiz=FALSE,cex=0.9,y.intersp=2)
+legend('topleft',legend=row.names(repond_pestcat)[6:1],border="transparent",
+       pch=15,col=colovec[6:1],bg=colovec[6:1],bty ="n",horiz=FALSE,
+       cex=0.9,pt.cex=1.4,x.intersp=1.5,y.intersp=6)
 par(op)
 
 #export to a pdf 6 x 5 inches
