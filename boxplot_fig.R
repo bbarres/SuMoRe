@@ -26,7 +26,7 @@ tmp$type_monitoring_par_repondant<-factor(tmp$type_monitoring_par_repondant,
 #here comes the code for the boxplot
 op<-par(mar=c(5.1,7,2.1,2.1),font.lab=2)
 bx<-boxplot(tmp$q_nb_participant_choice~tmp$type_monitoring_par_repondant,
-            horizontal=FALSE,
+            horizontal=FALSE,col="transparent",border="transparent",
             xlab="Type of resistance monitoring system",
             ylab="Number of participants\nto the choice of the themes", 
             las=1,cex.lab=1.5,cex=1.5,frame=FALSE,yaxt='n',xaxt='n',
@@ -34,12 +34,12 @@ bx<-boxplot(tmp$q_nb_participant_choice~tmp$type_monitoring_par_repondant,
 box(lwd=4,lty=1,bty="l")
 axis(2, at=c(0,1,2,3,4),las=2,cex.axis=1.3,lwd=4,font=2)
 axis(1, at=c(1,2,3),labels=c("Academic","Governmental","Private"),
-     las=1,cex.axis=1.3,lwd=4,font=2)
-tmp$qnbpartjit<-jitter(tmp$q_nb_participant_choice,1.15)
-stripchart(tmp$qnbpartjit~tmp$type_monitoring_par_repondant,cex=0.9,
+     las=1,cex.axis=1.2,lwd=4,font=2)
+tmp$qnbpartjit<-jitter(tmp$q_nb_participant_choice,1.01)
+stripchart(tmp$qnbpartjit~tmp$type_monitoring_par_repondant,cex=1,
            frame=FALSE,yaxt='n',xaxt='n',ylim=c(0,4),method="jitter",
            offset=1,add=TRUE, vertical=TRUE,pch=19,
-           col=adjustcolor("grey",alpha=0.4))
+           col=adjustcolor("grey",alpha=0.6),jitter=0.25)
 par(op)
 
 tempmean<-aggregate(tmp$q_nb_participant_choice,
