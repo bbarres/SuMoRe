@@ -183,6 +183,8 @@ row.names(repond_pestcat)<-c("Insects","Weeds","Fungi",
                              "Fungi\nInsects\nWeeds")
 repond_pestcat<-repond_pestcat[,c(1,3,2)]
 effectif<-colSums(repond_pestcat)
+#changing a label (turning "public" into "governmental")
+names(effectif)<-c("Academic","Governmental","Private")
 effectif
 repond_pestcat<-prop.table(repond_pestcat,margin=2)*100
 repond_pestcat
