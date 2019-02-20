@@ -135,6 +135,7 @@ table<-data.frame(Facteur1=rep(levels(data_monitoring$type_monitoring_par_repond
                   Facteur2=c(rep("Academics",3),rep("Officials",3),
                              rep("Privates",3)),
                   Count=c(var1,var2,var6))
+table<-table[c(1,4,7,3,6,9,2,5,8),]
 #preparing the labels for the plot
 LEVEL<-data_monitoring$type_monitoring_par_repondant
 levels(LEVEL)[3]<-"Governmental"
