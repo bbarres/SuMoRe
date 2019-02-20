@@ -83,7 +83,7 @@ par(op)
 
 
 ###############################################################################
-#Figure 3E: Frequence de publication ~ monitoring device
+#Figure 3C: Frequence de publication ~ monitoring device
 ###############################################################################
 
 #picking a "nice" set of colors

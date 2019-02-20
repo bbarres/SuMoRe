@@ -13,7 +13,7 @@ source("dataloading.R")
 
 
 ###############################################################################
-#Figure 3: relation between HDI and organization of reistance monitoring
+#Figure 2A: relation between HDI and organization of reistance monitoring
 ###############################################################################
 
 colovec<-brewer.pal(7,"Dark2")[7:1]
@@ -35,6 +35,7 @@ effectif
 IDH_coex<-prop.table(IDH_coex,margin=2)*100
 IDH_coex
 
+def.par<-par(no.readonly=TRUE)
 layout(cbind(1,2),widths=c(9,3))  #put legend on the right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_coex,col=colovec,border=NA,axes=FALSE,
@@ -59,12 +60,13 @@ legend('topleft',legend=row.names(IDH_coex),border="transparent",pch=15,
        col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
        x.intersp=1.5,y.intersp=5)
 par(op)
+par(def.par)
 
 #export to a pdf 6 x 5 inches
 
 
 ###############################################################################
-#Figure 4: relation between IDH and PPP use type of monitoring
+#Figure 2B: relation between IDH and PPP use type of monitoring
 ###############################################################################
 
 colovec<-brewer.pal(9,"Set1")[3:6]
@@ -83,6 +85,7 @@ effectif
 IDH_PPPsurv<-prop.table(IDH_PPPsurv,margin=2)*100
 IDH_PPPsurv
 
+def.par<-par(no.readonly=TRUE)
 layout(cbind(1,2),widths=c(9,2))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_PPPsurv,col=colovec,border=NA,axes=FALSE,
@@ -107,12 +110,13 @@ legend('left',legend=row.names(IDH_PPPsurv),border="transparent",pch=15,
        col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
        x.intersp=1.5,y.intersp=5)
 par(op)
+par(def.par)
 
 #export to a pdf 6 x 5 inches
 
 
 ###############################################################################
-#Figure 5: relation between PPP usage and coexistence of monitoring
+#Figure 2C: relation between PPP usage and coexistence of monitoring
 ###############################################################################
 
 colovec<-brewer.pal(7,"Dark2")[7:1]
@@ -133,6 +137,7 @@ effectif
 PPPsurv_coex<-prop.table(PPPsurv_coex,margin=2)*100
 PPPsurv_coex
 
+def.par<-par(no.readonly=TRUE)
 layout(cbind(1,2),widths=c(9,3))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0.1))
 temp<-barplot(PPPsurv_coex,col=colovec,border=NA,axes=FALSE,
@@ -157,6 +162,7 @@ legend('topleft',legend=row.names(PPPsurv_coex),border="transparent",pch=15,
        col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
        x.intersp=1.5,y.intersp=5)
 par(op)
+par(def.par)
 
 #export to a pdf 6 x 5 inches
 
@@ -181,6 +187,7 @@ effectif
 repond_pestcat<-prop.table(repond_pestcat,margin=2)*100
 repond_pestcat
 
+def.par<-par(no.readonly=TRUE)
 layout(cbind(1,2),widths=c(9,2))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(repond_pestcat,col=colovec,border=NA,axes=FALSE,
@@ -206,6 +213,7 @@ legend('topleft',legend=row.names(repond_pestcat)[6:1],border="transparent",
        pch=15,col=colovec[6:1],bg=colovec[6:1],bty ="n",horiz=FALSE,
        cex=0.9,pt.cex=1.4,x.intersp=1.5,y.intersp=6)
 par(op)
+par(def.par)
 
 #export to a pdf 6 x 5 inches
 

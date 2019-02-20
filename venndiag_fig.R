@@ -14,7 +14,7 @@ source("dataloading.R")
 
 
 ###############################################################################
-#Figure 6: Venn Diagram
+#Figure 3A: Venn Diagram
 ###############################################################################
 
 #building the contingency table
@@ -44,7 +44,7 @@ plot(fit,
 
 
 ###############################################################################
-#Figure 12: Venn Diagram
+#Figure 4A: Venn Diagram
 ###############################################################################
 
 #building the contingency table
@@ -55,11 +55,11 @@ print(paste("Total number of evaluated monitoring =",sum(div_fin)))
 print(paste("Missing data = ",div_fin[1]))
 
 #chosing a set of colors
-colovec<-brewer.pal(3,"Dark2")
+colovec<-brewer.pal(7,"Dark2")[c(5,6,7)]
 
-fit<-euler(c(Academic=23,Public=36,Private=55,"Academic&Public"=7,
-             "Academic&Private"=5,"Public&Private"=36,
-             "Academic&Public&Private"=12))
+fit<-euler(c(Academic=23,Governmental=36,Private=55,"Academic&Governmental"=7,
+             "Academic&Private"=5,"Governmental&Private"=36,
+             "Academic&Governmental&Private"=12))
 plot(fit,
      quantities=list(col=c("black"),cex=1.3,font=3),
      edges=list(col=colovec,lwd=7),
