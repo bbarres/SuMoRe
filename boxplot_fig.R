@@ -27,9 +27,9 @@ tmp$type_monitoring_par_repondant<-factor(tmp$type_monitoring_par_repondant,
 op<-par(mar=c(5.1,7,2.1,2.1),font.lab=2)
 bx<-boxplot(tmp$q_nb_participant_choice~tmp$type_monitoring_par_repondant,
             horizontal=FALSE,col="transparent",border="transparent",
-            xlab="Type of resistance monitoring system",
+            xlab="Monitoring system category",
             ylab="Number of participants\nto the choice of the topics", 
-            las=1,cex.lab=1.5,cex=1.5,frame=FALSE,yaxt='n',xaxt='n',
+            las=1,cex.lab=2,cex=1.5,frame=FALSE,yaxt='n',xaxt='n',
             ylim=c(0,4.3),boxwex=0.3,lwd=0.9)
 box(lwd=4,lty=1,bty="l")
 axis(2, at=c(0,1,2,3,4),las=2,cex.axis=1.3,lwd=4,font=2)

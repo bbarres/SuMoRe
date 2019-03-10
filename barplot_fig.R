@@ -67,13 +67,13 @@ levels(LEVEL)[3]<-"Governmental"
 op<-par(mar=c(6.5, 5, 2, 2) + 0.1)
 graf<-barplot(table$Count,
               col=thecol,ylim=c(0,70),ylab="Number of responses",
-              cex.axis =1.3,cex.lab=1.8,las=1,yaxt="n",bty="n",border=NA,
+              cex.axis =1.3,cex.lab=2,las=1,yaxt="n",bty="n",border=NA,
               space=c(rep(0.1,3),1.2,rep(0.1,2),1.2,rep(0.1,2)),font.lab=2)
 axis(1,at=graf[c(2,5,8)],labels=FALSE, lwd=4)
 axis(2,at=seq(0,70,10),labels=seq(0,70,10),lwd=4,las=1,font=2,cex.axis=1.1)
 box(bty="l",lwd=4)
 mtext(levels(LEVEL)[c(1,3,2)],at=c(1.7,6.1,10.6),line=1.5,cex=1.5,side=1)
-mtext("Type of monitoring system", at=6.1, line=3,cex=1.8,side=1,font=2,padj=1)
+mtext("Monitoring system category", at=6.1, line=3,cex=2,side=1,font=2,padj=1)
 legend(6,75,legend=c("Loss of efficacy" , "Selection pressure" , "Randomly" ),
        pch=15,col=thecol,bg=thecol,bty="n",cex=1.3,pt.cex=1.4,xpd=TRUE,
        y.intersp=2.5)
@@ -96,7 +96,7 @@ VAR<-c(VAR[c(3,1,5,2,4),1],VAR[c(3,1,5,2,4),3],VAR[c(3,1,5,2,4),2])+0.1
 #tracer diagramme en bâton
 op<-par(mar=c(6, 5, 1, 1) + 0.1)
 graf<-barplot(VAR,col=rep(thecol,3),ylim=c(0,70),
-              ylab="Number of responses",cex.axis =1.3,cex.lab=1.8,
+              ylab="Number of responses",cex.axis =1.3,cex.lab=2,
               las=1,xaxt="n",yaxt="n",bty="n",border=NA,
               space=c(rep(0.1,5),1.2,rep(0.1,4),1.2,rep(0.1,4)),
               font.lab=2)
@@ -106,7 +106,7 @@ axis(2,at=seq(0,70,10),labels=seq(0,70,10),lwd=4,las=1,font=2,cex.axis=1.1)
 box(bty="l",lwd=4)
 mtext(c("Academic","Governmental","Private"),at=graf[c(3,8,13)],
       line=1.5,cex=1.5,side=1)
-mtext("Type of monitoring system", at=9.4,line=3,cex=1.8,side=1,
+mtext("Monitoring system category", at=9.4,line=3,cex=2,side=1,
       font=2,padj=1)
 legend(8,75,legend=c("Not published","During cropping season",
                        "Yearly","Less frequently","Other"),
@@ -150,7 +150,7 @@ axis(1,at=graf[c(2,5,8)],labels=FALSE, lwd=4)
 axis(2,at=seq(0,100,10),labels=seq(0,100,10),lwd=4,las=1,font=2,cex.axis=1.1)
 box(bty="l",lwd=4)
 mtext(levels(LEVEL)[c(1,3,2)],at=c(1.7,6.1,10.6),line=1.5,cex=1.5,side=1)
-mtext("Type of monitoring system", at=6.1, line=3,cex=1.8,side=1,font=2,
+mtext("Monitoring system category", at=6.1, line=3,cex=2,side=1,font=2,
       padj=1)
 legend(6.5,105,legend=c("Academics","Officials","Privates"),y.intersp=2.5,
        pch=15,col=thecol,bg=thecol,bty="n",cex=1.4,pt.cex=1.6,xpd=TRUE)
