@@ -1,8 +1,8 @@
-###############################################################################
-###############################################################################
+##############################################################################/
+##############################################################################/
 #Code for the barplot (absolute values)
-###############################################################################
-###############################################################################
+##############################################################################/
+##############################################################################/
 
 #this code was written by Christophe Plantamp
 #loading the packages necessary for the analysis
@@ -10,9 +10,9 @@ library(RColorBrewer)
 source("dataloading.R")
 
 
-###############################################################################
-#Figure 1B: Aera of expertise of the respondants
-###############################################################################
+##############################################################################/
+#Figure 1B: Aera of expertise of the respondants####
+##############################################################################/
 
 #choix de la couleur des barres
 thecol<-brewer.pal(9,"GnBu")[6]
@@ -26,8 +26,8 @@ VAR<-VAR[c(1,4,5,3,2)]
 op<-par(mar=c(8, 5, 2, 2) + 0.1,xpd=TRUE)
 graf<-barplot(VAR,space=0.8,col=thecol,ylim=c(0,70),
               ylab="Number of respondants",
-              cex.axis =1.3,cex.lab=2,las=1,xaxt="n",yaxt="n",bty="n",border=NA,
-              font.lab=2)
+              cex.axis =1.3,cex.lab=2,las=1,xaxt="n",
+              yaxt="n",bty="n",border=NA,font.lab=2)
 axis(1,at=graf[1:5],labels=FALSE,lwd=4)
 axis(2,at=seq(0,70,10),labels=seq(0,70,10),lwd=4,las=1,font=2,cex.axis=1.1)
 title(main=NULL,xlab="Area of expertise",cex.lab=2,line=6,font.lab=2)
@@ -38,9 +38,9 @@ par(op)
 #export to a pdf 6 x 5 inches
 
 
-###############################################################################
-#Figure 3B: Sampling choice criteria method ~ monitoring device
-###############################################################################
+##############################################################################/
+#Figure 3B: Sampling choice criteria method ~ monitoring device####
+##############################################################################/
 
 #picking a "nice" set of colors
 thecol<-brewer.pal(11,"PiYG")[c(2,3,4)]
@@ -82,15 +82,16 @@ par(op)
 #export to a pdf 6 x 5 inches
 
 
-###############################################################################
-#Figure 3C: Frequence de publication ~ monitoring device
-###############################################################################
+##############################################################################/
+#Figure 3C: Frequence de publication ~ monitoring device####
+##############################################################################/
 
-#picking a "nice" set of colors
+#picking a set of colors
 thecol<-brewer.pal(5,"Set1")
 
 #preparing the dataset for the plotting
-VAR<-xtabs(~data_monitoring$q_frequence_publications_res+data_monitoring$type_monitoring_par_repondant)
+VAR<-xtabs(~data_monitoring$q_frequence_publications_res+
+              data_monitoring$type_monitoring_par_repondant)
 VAR<-c(VAR[c(3,1,5,2,4),1],VAR[c(3,1,5,2,4),3],VAR[c(3,1,5,2,4),2])+0.1
 
 #tracer diagramme en bâton
@@ -117,19 +118,24 @@ par(op)
 #export to a pdf 6 x 5 inches
 
 
-###############################################################################
-#Figure 4C: Number of respondant by type of monitoring and type of respondant
-###############################################################################
+##############################################################################/
+#Figure 4C: Number of respondant by types of monitoring and respondant####
+##############################################################################/
 
-#picking a "nice" set of colors
+#picking a set of colors
 thecol<-brewer.pal(11,"PRGn")[c(11,10,9)]
 
 #preparing the dataset for the plotting
-var1<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Academics,data_monitoring$type_monitoring_par_repondant,sum)
-var2<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Officials,data_monitoring$type_monitoring_par_repondant,sum)
-var3<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Companies,data_monitoring$type_monitoring_par_repondant,sum)
-var4<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Advisers,data_monitoring$type_monitoring_par_repondant,sum)
-var5<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Distributors,data_monitoring$type_monitoring_par_repondant,sum)
+var1<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Academics,
+             data_monitoring$type_monitoring_par_repondant,sum)
+var2<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Officials,
+             data_monitoring$type_monitoring_par_repondant,sum)
+var3<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Companies,
+             data_monitoring$type_monitoring_par_repondant,sum)
+var4<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Advisers,
+             data_monitoring$type_monitoring_par_repondant,sum)
+var5<-tapply(data_monitoring$q_analyzes_and_interprets_the_data_Distributors,
+             data_monitoring$type_monitoring_par_repondant,sum)
 var6<-var3+var4+var5
 table<-data.frame(Facteur1=rep(levels(data_monitoring$type_monitoring_par_repondant),3),
                   Facteur2=c(rep("Academics",3),rep("Officials",3),
@@ -159,9 +165,9 @@ par(op)
 #export to a pdf 6 x 5 inches
 
 
-###############################################################################
+##############################################################################/
 #END
-###############################################################################
+##############################################################################/
 
 
 ###############################################################################
@@ -171,7 +177,8 @@ par(op)
 #choix de la couleur des barres
 thecol<-c("grey30","grey50","grey70")
 
-VAR<-xtabs(~data_monitoring$q_moyens_collecte_data+data_monitoring$type_monitoring_par_repondant)
+VAR<-xtabs(~data_monitoring$q_moyens_collecte_data+
+              data_monitoring$type_monitoring_par_repondant)
 VAR<-VAR[,c(1,3,2)]
 VAR<-c(VAR[1,],VAR[4,],VAR[3,])
 
