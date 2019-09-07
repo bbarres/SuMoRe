@@ -168,7 +168,7 @@ par(def.par)
 
 
 ##############################################################################/
-#Figure 4D: relation between type of resistance monitoring and type of pest####
+#Figure 4B: relation between type of resistance monitoring and type of pest####
 ##############################################################################/
 
 colovec<-lacroix_palettes$PassionFruit[1,c(1,3,6,2,5,4)]
