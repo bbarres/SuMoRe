@@ -13,7 +13,7 @@ source("dataloading.R")
 
 
 ##############################################################################/
-#Figure 4B: boxplot choice of the themes####
+#Figure 5B: boxplot choice of the themes####
 ##############################################################################/
 
 #getting the dataset in shape for plotting

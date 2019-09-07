@@ -18,7 +18,7 @@ source("dataloading.R")
 
 
 ##############################################################################/
-#Figure 1: World map of the responding countries####
+#Figure 2A: World map of the responding countries####
 ##############################################################################/
 
 #preparing the data

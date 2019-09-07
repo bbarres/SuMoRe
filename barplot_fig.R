@@ -11,7 +11,7 @@ source("dataloading.R")
 
 
 ##############################################################################/
-#Figure 1B: Aera of expertise of the respondants####
+#Figure 2B: Aera of expertise of the respondants####
 ##############################################################################/
 
 #picking a set of colors
@@ -39,7 +39,7 @@ par(op)
 
 
 ##############################################################################/
-#Figure 1C: Number of system described####
+#Figure 2C: Number of system described####
 ##############################################################################/
 
 #picking a set of colors
@@ -65,7 +65,7 @@ par(op)
 
 
 ##############################################################################/
-#Figure 1D: Number of countries with at least one monitoring system of type####
+#Figure 2D: Number of countries with at least one monitoring system of type####
 ##############################################################################/
 
 #picking a set of colors
@@ -93,7 +93,7 @@ par(op)
 
 
 ##############################################################################/
-#Figure 3B: Sampling choice criteria method ~ monitoring device####
+#Figure 4D: Sampling choice criteria method ~ monitoring device####
 ##############################################################################/
 
 #picking a set of colors
@@ -138,7 +138,7 @@ par(op)
 
 
 ##############################################################################/
-#Figure 3C: Frequence de publication ~ monitoring device####
+#Figure 4C: Frequence de publication ~ monitoring device####
 ##############################################################################/
 
 #picking a set of colors
@@ -174,7 +174,7 @@ par(op)
 
 
 ##############################################################################/
-#Figure 4C: Number of respondant by types of monitoring and respondant####
+#Figure 5C: Number of respondant by types of monitoring and respondant####
 ##############################################################################/
 
 #picking a set of colors

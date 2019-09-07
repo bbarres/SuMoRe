@@ -13,7 +13,7 @@ source("dataloading.R")
 
 
 ##############################################################################/
-#Figure 2A: relation between HDI and organization of reistance monitoring####
+#Figure 3A: relation between HDI and organization of reistance monitoring####
 ##############################################################################/
 
 colovec<-brewer.pal(7,"Dark2")[7:1]
@@ -66,7 +66,7 @@ par(def.par)
 
 
 ##############################################################################/
-#Figure 2B: relation between IDH and PPP use type of monitoring####
+#Figure 3B: relation between IDH and PPP use type of monitoring####
 ##############################################################################/
 
 colovec<-brewer.pal(9,"Set1")[3:6]
@@ -116,7 +116,7 @@ par(def.par)
 
 
 ##############################################################################/
-#Figure 2C: relation between PPP usage and coexistence of monitoring####
+#Figure 3C: relation between PPP usage and coexistence of monitoring####
 ##############################################################################/
 
 colovec<-brewer.pal(7,"Dark2")[7:1]
@@ -168,7 +168,7 @@ par(def.par)
 
 
 ##############################################################################/
-#Figure 3D: relation between type of resistance monitoring and type of pest####
+#Figure 4D: relation between type of resistance monitoring and type of pest####
 ##############################################################################/
 
 colovec<-lacroix_palettes$PassionFruit[1,c(1,3,6,2,5,4)]
