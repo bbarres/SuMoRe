@@ -3,7 +3,7 @@
 # Supporting code and data for: Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity
 *This repository contains the R code used for the data analyses and production of the figures of the related article*
 
-![alt text]()
+![alt text](https://vy7bgw.db.files.1drv.com/y4mUwkekkt-WAKeCnSZg4q20WFG-POgVH1xWs1P6vqYJBTF3Nk6qh-I13dlkQ4foS5Jm8QvVDi4jGGzkEhNQIGSdSDOnmCHjOcx9sg_-zJ2T2JGHGqz5qcw2QDDYi7Moh4Q_Dh4pMmoWBvZYN-5lqfcZhfXOxSIdYCSuoLqYxAoiWS26aDUOZBEpATMom2dYcLXZWpTpEmuD70hRQck7r04jA?width=1586&height=588&cropmode=none)
 
 
 ## Context
