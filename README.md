@@ -10,10 +10,16 @@
 
 
 ## Datasets
+In this section, you will find the list of the datasets used in this study. The data files can be found in the ***data*** folder. For the data tables, the name of the different variables are listed and explained as well. 
+
+The first dataset contains...
++ 20181211_data_pays.csv
+  + *first variable*: 
+  + *second variable*: 
 
 
 ## R scripts
-Here you will find the list of the different scripts used in the article with a brief description of their purpose. 
+In this section, you will find the list of the different scripts used in the article with a brief description of their purpose. 
 + **dataloading.R**: the script to load the different datasets and the necessary package in the environment
 + **LogRegMonito.R**: the script used for the regression analysis
 + **barplot_fig.R**: the script used for producing the barplot figures xxxxxxx
