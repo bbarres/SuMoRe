@@ -13,6 +13,7 @@
 
 
 ## R scripts
+Here you will find the list of the different scripts used in the article with a brief description of their purpose. 
 + **dataloading.R**: the script to load the different datasets and the necessary package in the environment
 + **LogRegMonito.R**: the script used for the regression analysis
 + **barplot_fig.R**: the script used for producing the barplot figures xxxxxxx
