@@ -12,11 +12,17 @@
 ## Datasets
 In this section, you will find the list of the datasets used in this study. The data files can be found in the ***data*** folder. For the data tables, the name of the different variables are listed and explained as well. 
 
-The first dataset contains...
-+ 20181211_data_pays.csv
++ **20181211_data_pays.csv**: The first dataset contains...
+  + *first variable*: 
+  + *second variable*: 
+  
++ **20181114_data_repondant.csv**: The second dataset contains...
   + *first variable*: 
   + *second variable*: 
 
++ **20181121_data_monitoring.csv**: The third dataset contains...
+  + *first variable*: 
+  + *second variable*: 
 
 ## R scripts
 In this section, you will find the list of the different scripts used in the article with a brief description of their purpose. 
