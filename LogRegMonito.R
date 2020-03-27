@@ -53,19 +53,22 @@ visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
 op<-par(mfrow=c(1,3))
 visreg(IDHacad.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Academic",
        overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="P(Academic monitoring exist)",
+       ylab="Probability that an Academic monitoring system exists",
        legend=FALSE,ylim=c(0,1),main=list("Academic",cex=2))
+box()
 visreg(IDHpub.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Public",
        overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="P(Public monitoring exist)",
-       legend=FALSE,ylim=c(0,1),main=list("Public",cex=2))
+       ylab="Probability that a Governmental monitoring system exists",
+       legend=FALSE,ylim=c(0,1),main=list("Governmental",cex=2))
+box()
 visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
        overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="P(Private monitoring exist)",
+       ylab="Probability that a Private monitoring system exists",
        legend=FALSE,ylim=c(0,1),main=list("Private",cex=2))
+box()
 par(op)
 
-#export to a pdf 14 x 5 inches
+#export to a pdf 10 x 4 inches
 
 
 ##############################################################################/
@@ -105,18 +108,50 @@ visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
        legend=FALSE,ylim=c(0,1))
 
 #the 2 plot combined
-op<-par(mfrow=c(1,2))
+op<-par(mfrow=c(1,2),mar=c(5.1,5,4.1,2.1))
 visreg(IDHsal.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Sale",
        overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="P(PPP sale monitoring exist)",
+       ylab="Probability that a PPP\n sale monitoring exists",
        legend=FALSE,ylim=c(0,1),main=list("Sale",cex=2))
+box()
 visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
        overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="P(PPP survey monitoring exist)",
+       ylab="Probability that a PPP\n survey monitoring exists",
        legend=FALSE,ylim=c(0,1),main=list("Survey",cex=2))
+box()
 par(op)
 
-#export to a pdf 9.33 x 5 inches
+#export to a pdf 6.66 x 4 inches
+
+
+op<-par(mfrow=c(2,3),mar=c(5.1,5,4.1,2.1))
+visreg(IDHacad.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Academic",
+       overlay=TRUE,partial=FALSE,xlab="IDH",
+       ylab="Probability that an Academic\n monitoring system exists",
+       legend=FALSE,ylim=c(0,1),main=list("Academic",cex=2))
+box()
+visreg(IDHpub.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Public",
+       overlay=TRUE,partial=FALSE,xlab="IDH",
+       ylab="Probability that a Governmental\n monitoring system exists",
+       legend=FALSE,ylim=c(0,1),main=list("Governmental",cex=2))
+box()
+visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
+       overlay=TRUE,partial=FALSE,xlab="IDH",
+       ylab="Probability that a Private\n monitoring system exists",
+       legend=FALSE,ylim=c(0,1),main=list("Private",cex=2))
+box()
+visreg(IDHsal.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Sale",
+       overlay=TRUE,partial=FALSE,xlab="IDH",
+       ylab="Probability that a PPP\n sale monitoring exists",
+       legend=FALSE,ylim=c(0,1),main=list("Sale",cex=2))
+box()
+visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
+       overlay=TRUE,partial=FALSE,xlab="IDH",
+       ylab="Probability that a PPP\n survey monitoring exists",
+       legend=FALSE,ylim=c(0,1),main=list("Survey",cex=2))
+box()
+par(op)
+#export to a pdf 11 x 7 inches
 
 
 ##############################################################################/
