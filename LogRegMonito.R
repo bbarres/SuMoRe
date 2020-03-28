@@ -120,9 +120,12 @@ visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
        legend=FALSE,ylim=c(0,1),main=list("Survey",cex=2))
 box()
 par(op)
-
 #export to a pdf 6.66 x 4 inches
 
+
+##############################################################################/
+#Combine plot for the supplementary figure S1####
+##############################################################################/
 
 op<-par(mfrow=c(2,3),mar=c(5.1,5,4.1,2.1))
 visreg(IDHacad.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Academic",

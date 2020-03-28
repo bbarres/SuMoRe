@@ -39,12 +39,11 @@ sPDF <- joinCountryData2Map(data_country_total
 #transform to robin for the Robinson projection
 sPDF <- spTransform(sPDF, CRS=CRS("+proj=robin +ellps=WGS84"))
 
-#BB : je n'ai pas compris à quoi ça servait, mais nécessite le package rgeos, 
-#peut-être pour voir la distribution des aires des différents polygones ?
+#plotting the distribution of the area of the different countries
 plot(gArea(sPDF,byid=TRUE))
 
 #plot map
-par(oma=c(0,0,0,0),mar=c(0,0,0,0))
+op<-par(oma=c(0,0,0,0),mar=c(0,0,0,9))
 par(xpd=TRUE)
 mapParams <- mapCountryData(sPDF[which(sPDF@data$ADMIN!="Antarctica" & 
                                          gArea(sPDF,byid=TRUE)>20000000000 ),]
@@ -57,13 +56,13 @@ mapParams <- mapCountryData(sPDF[which(sPDF@data$ADMIN!="Antarctica" &
                             ,missingCountryCol = "white"
                             ,borderCol="black"
                             ,lwd=0.8)
-legend(-16500000,-7500000,
-       fill = c("white",colourPalette[1:4]),#title="Number of respondents" ,
-       legend = c("0","1","2","[3-6]","[7-10]"), text.width=4000000,
-       cex=1.5, col="black",bg=NA,bty="n",ncol=5, xjust=0,
-       x.intersp=0.6 ,title.adj = 0)
-
-#export to pdf 6 x 5 inches
+legend(16000000,6000000,pch=21,
+       pt.bg=c("white",colourPalette[1:4]),#title="Number of\nrespondents",
+       legend=c("0","1","2","[3-6]","[7-10]"),text.width=60000000,
+       cex=1.3,pt.cex=3,col="black",bg=NA,bty="n",ncol=1,xjust=0,
+       x.intersp=0.4,y.intersp=0.6,title.adj=0.03)
+par(op)
+#export to pdf 15 x 7 inches
 
 
 ##############################################################################/
