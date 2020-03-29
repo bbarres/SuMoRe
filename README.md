@@ -12,9 +12,13 @@
 ## Datasets
 In this section, you will find the list of the datasets used in this study. The data files can be found in the ***data*** folder. For the data tables, the name of the different variables are listed and explained as well. 
 
-+ **20181211_data_pays.csv**: The first dataset contains...
-  + *first variable*: 
-  + *second variable*: 
++ **20181211_data_pays.csv**: The first dataset contains information about countries for which at least there was one respondant to the survey. It sums up the number of classes of pests that are monitored, the type of usage information available in the different countries and some information linked to the developement of the countries. 
+  + *pays*: the name of the countries
+  + *coexistence_pays*: type of monitoring cited at least once by the survey's respondant. 
+  + *Indice.Dvpt.Humain*: The value of the Human Developement Indice (HDI)
+  + *Indice.Dvpt.Humain_classes*: The same information as the previous one but grouped into classes of 0.1 bin. 
+  + *nb_bioagr_surv*: the number of pests surveyed in the country according to the survey's respondant
+  + *q136_q137_UsagePPP*: the type of PPP usage monitoring, this could be made by monitoring sale, by a survey or by both.
   
 + **20181114_data_repondant.csv**: The second dataset contains...
   + *first variable*: 
