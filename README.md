@@ -25,10 +25,10 @@ In this section, you will find the list of the datasets used in this study. The 
   + *q2*: country of the respondant
   + *q136-137.recodée*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. If the respondant did not answer to this question, the field is left blank. The respondant can also answer that he/she doesn't know the information. 
   + *Domaine_competences_repondant*: the type of pesticide classes of which the respondent claims to be knowledgeable. The value can be fungicide (*'fung'*), herbicide (*'herb'*), insecticide (*'ins'*) or any combination of the three classes. 
-  + *mailles_sales_PPP_q142bis*: the within country geographical level at which the sales figures are collected. The value can be : *'country'*, *'region'*, *'sale location'*, *'do not know'* and *'other'*. 
-  + *mailles_autres_donnees_usages_PPP_q153bis*: 
-  + *mailles_données_usages_comb*: 
-  + *continent*: the continent of the country of the respondant
+  + *mailles_sales_PPP_q142bis*: the within country geographical level at which the sales figures are collected. The value can be : *'country'*, *'region'*, *'sale location'*,*'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
+  + *mailles_autres_donnees_usages_PPP_q153bis*: the within country geographical level at which the other method (ie different of sales figures) of PPP monitoring are collected. The value can be : *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*.Missing data are indicated by *'NA'*. 
+  + *mailles_données_usages_comb*: the combination of the two precedent fields. The value can be a combination of: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
+  + *continent*: the continent of the country of the respondant. 
   
 + **20181121_data_monitoring.csv**: The third dataset contains...
   + *first variable*: 
