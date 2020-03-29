@@ -12,21 +12,28 @@
 ## Datasets
 In this section, you will find the list of the datasets used in this study. The data files can be found in the ***data*** folder. For the data tables, the name of the different variables are listed and explained as well. 
 
-+ **20181211_data_pays.csv**: The first dataset contains information about countries for which at least there was one respondant to the survey. It sums up the number of classes of pests that are monitored, the type of usage information available in the different countries and some information linked to the developement of the countries. 
-  + *pays*: the name of the countries
++ **20181211_data_pays.csv**: the first dataset contains information about countries for which there was at least one respondant to the survey. It sums up the number of classes of pests that are monitored, the type of usage information available in the different countries and some information linked to the development level of the countries. 
+  + *pays*: name of the country
   + *coexistence_pays*: type of monitoring cited at least once by the survey's respondant. 
-  + *Indice.Dvpt.Humain*: The value of the Human Developement Indice (HDI)
-  + *Indice.Dvpt.Humain_classes*: The same information as the previous one but grouped into classes of 0.1 bin. 
-  + *nb_bioagr_surv*: the number of pests surveyed in the country according to the survey's respondant
-  + *q136_q137_UsagePPP*: the type of PPP usage monitoring, this could be made by monitoring sale, by a survey or by both.
+  + *Indice.Dvpt.Humain*: value of the Human Development Index (HDI) as of 2019
+  + *Indice.Dvpt.Humain_classes*: the same information as HDI but grouped into classes of 0.1 bin. 
+  + *nb_bioagr_surv*: number of pests surveyed in the country according to the survey's respondant. 
+  + *q136_q137_UsagePPP*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. This is the combined information for all the respondant of one country. 
   
-+ **20181114_data_repondant.csv**: The second dataset contains...
-  + *first variable*: 
-  + *second variable*: 
-
++ **20181114_data_repondant.csv**: the second dataset contains information about the respondant and their answers to questions related to PPP monitoring in their respective coutry. 
+  + *q160*: anonymised respondant ID
+  + *q2*: country of the respondant
+  + *q136-137.recodée*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. If the respondant did not answer to this question, the field is left blank. The respondant can also answer that he/she doesn't know the information. 
+  + *Domaine_competences_repondant*: the type of pesticide classes of which the respondent claims to be knowledgeable. The value can be fungicide (*'fung'*), herbicide (*'herb'*), insecticide (*'ins'*) or any combination of the three classes. 
+  + *mailles_sales_PPP_q142bis*: the within country geographical level at which the sales figures are collected. The value can be : *'country'*, *'region'*, *'sale location'*, *'do not know'* and *'other'*. 
+  + *mailles_autres_donnees_usages_PPP_q153bis*: 
+  + *mailles_données_usages_comb*: 
+  + *continent*: the continent of the country of the respondant
+  
 + **20181121_data_monitoring.csv**: The third dataset contains...
   + *first variable*: 
   + *second variable*: 
+
 
 ## R scripts
 In this section, you will find the list of the different scripts used in the article with a brief description of their purpose. 
