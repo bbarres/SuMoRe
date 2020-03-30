@@ -4,7 +4,9 @@
 ##############################################################################/
 ##############################################################################/
 
-#this code was written by Pauline De Jerphanion
+#this code was originaly written by Pauline De Jerphanion and modified by
+#Benoit Barrès
+
 #loading the packages necessary for the analysis
 library(rworldmap)
 library(classInt)
@@ -13,6 +15,7 @@ library(ggplot2)
 library(reshape2)
 library(rgdal)
 library(rgeos)
+
 #and the data
 source("dataloading.R")
 

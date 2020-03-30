@@ -13,20 +13,20 @@ Some general information on the survey and the main aims of the study. Basically
 In this section, you will find the list of the datasets used in this study. The data files can be found in the ***data*** folder. For the data tables, the name of the different variables are listed and explained as well. 
 
 + **20181211_data_pays.csv**: the first dataset contains information about countries for which there was at least one respondant to the survey. It sums up the number of classes of pests that are monitored, the type of usage information available in the different countries and some information linked to the development level of the countries. 
-  + *pays*: name of the country
+  + *pays*: name of the country. 
   + *coexistence_pays*: type of monitoring cited at least once by the survey's respondant. 
-  + *Indice.Dvpt.Humain*: value of the Human Development Index (HDI) as of 2019
+  + *Indice.Dvpt.Humain*: value of the Human Development Index (HDI) as of 2019. 
   + *Indice.Dvpt.Humain_classes*: the same information as HDI but grouped into classes of 0.1 bin. 
   + *nb_bioagr_surv*: number of pests surveyed in the country according to the survey's respondant. 
   + *q136_q137_UsagePPP*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. This is the combined information for all the respondant of one country. 
   
 + **20181114_data_repondant.csv**: the second dataset contains information about the respondant and their answers to questions related to PPP monitoring in their respective coutry. 
-  + *q160*: anonymised respondant ID
-  + *q2*: country of the respondant
+  + *q160*: anonymised respondant ID. 
+  + *q2*: country of the respondant. 
   + *q136-137.recodée*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. If the respondant did not answer to this question, the field is left blank. The respondant can also answer that he/she doesn't know the information. 
   + *Domaine_competences_repondant*: the type of pesticide classes of which the respondent claims to be knowledgeable. The value can be fungicide (*'fung'*), herbicide (*'herb'*), insecticide (*'ins'*) or any combination of the three classes. Missing data are indicated by *'NA'*. 
-  + *mailles_sales_PPP_q142bis*: the within country geographical level at which the sales figures are collected. The value can be : *'country'*, *'region'*, *'sale location'*,*'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
-  + *mailles_autres_donnees_usages_PPP_q153bis*: the within country geographical level at which the other method (ie different of sales figures) of PPP monitoring are collected. The value can be : *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
+  + *mailles_sales_PPP_q142bis*: the within country geographical level at which the sales figures are collected. The value can be: *'country'*, *'region'*, *'sale location'*,*'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
+  + *mailles_autres_donnees_usages_PPP_q153bis*: the within country geographical level at which the other method (ie different of sales figures) of PPP monitoring are collected. The value can be: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
   + *mailles_données_usages_comb*: the combination of the two precedent fields. The value can be a combination of: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
   + *continent*: the continent of the country of the respondant. 
   
@@ -42,7 +42,7 @@ In this section, you will find the list of the different scripts used in the art
 + **barplot_fig.R**: the script used for producing the barplot figures xxxxxxx
 + **boxplot_fig.R**: the script used for producing the boxplot figure xxxxxxx
 + **donutplot_fig.R**: the script used for producing the donutplot figure xxxxxxx
-+ **maprespondant_fig.R**: the script used for producing the map figure xxxxxxx
++ **maprespondant_fig.R**: the script used for producing the map, Figure 2A
 + **stacked_fig.R**: the script used for producing the stackedbar figure xxxxxxx
 + **venndiag_fig.R**: the script used for producing the Venn's diagram figure xxxxxxx
 
