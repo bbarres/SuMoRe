@@ -54,9 +54,17 @@ print(paste("Total number of evaluated monitoring =",sum(div_fin)))
 #number of monitoring with no information on the founding sources
 print(paste("Missing data = ",div_fin[1]))
 
+#computing the pivot table for funding cores of the different type of 
+#monitoring
+table(data_monitoring$participation_financement_monitoring_nouvelle_version,
+      data_monitoring$type_monitoring_par_repondant)
+rowSums(table(data_monitoring$participation_financement_monitoring_nouvelle_version,
+        data_monitoring$type_monitoring_par_repondant))
+
 #chosing a set of colors
 colovec<-brewer.pal(7,"Dark2")[c(5,6,7)]
 
+#source of funding for all the resistance monitoring system 
 fit<-euler(c(Academic=23,Governmental=36,Private=55,"Academic&Governmental"=7,
              "Academic&Private"=5,"Governmental&Private"=36,
              "Academic&Governmental&Private"=12))
