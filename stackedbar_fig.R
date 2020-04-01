@@ -58,7 +58,7 @@ par(mar=c(4.1,0.5,0,0))
 plot.new()
 legend('topleft',legend=row.names(IDH_coex),border="transparent",pch=15,
        col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
-       x.intersp=1.5,y.intersp=5)
+       x.intersp=1.5,y.intersp=3.3)
 par(op)
 par(def.par)
 
@@ -160,7 +160,7 @@ par(mar=c(4.1,0.5,0,0))
 plot.new()
 legend('topleft',legend=row.names(PPPsurv_coex),border="transparent",pch=15,
        col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
-       x.intersp=1.5,y.intersp=5)
+       x.intersp=1.5,y.intersp=3.3)
 par(op)
 par(def.par)
 
