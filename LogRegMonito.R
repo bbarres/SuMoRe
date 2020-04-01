@@ -131,31 +131,31 @@ op<-par(mfrow=c(2,3),mar=c(5.1,5,4.1,2.1))
 visreg(IDHacad.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Academic",
        overlay=TRUE,partial=FALSE,xlab="HDI",
        ylab="Probability that an Academic\n monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Academic",cex=2),
+       legend=FALSE,ylim=c(0,1),main=list("Academic RMS",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
 visreg(IDHpub.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Public",
        overlay=TRUE,partial=FALSE,xlab="HDI",
        ylab="Probability that a Governmental\n monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Governmental",cex=2),
+       legend=FALSE,ylim=c(0,1),main=list("Governmental RMS",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
 visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
        overlay=TRUE,partial=FALSE,xlab="HDI",
        ylab="Probability that a Private\n monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Private",cex=2),
+       legend=FALSE,ylim=c(0,1),main=list("Private RMS",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
 visreg(IDHsal.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Sale",
        overlay=TRUE,partial=FALSE,xlab="HDI",
        ylab="Probability that a PPP\n sale monitoring exists",
-       legend=FALSE,ylim=c(0,1),main=list("Sale",cex=2),
+       legend=FALSE,ylim=c(0,1),main=list("PPP Sale",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
 visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
        overlay=TRUE,partial=FALSE,xlab="HDI",
        ylab="Probability that a PPP\n survey monitoring exists",
-       legend=FALSE,ylim=c(0,1),main=list("Survey",cex=2),
+       legend=FALSE,ylim=c(0,1),main=list("PPP Survey",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
 par(op)
