@@ -16,10 +16,9 @@ source("dataloading.R")
 
 #formating the data set for the regression
 coexreg<-matrix(unlist(strsplit(as.character(data_pays$coexistence_pays),"_")),
-                ncol=3,dimnames=list(data_pays$pays,
-                                    c("Public","Private","Academic")),
+                ncol=3,
+                dimnames=list(data_pays$pays,c("Public","Private","Academic")),
                 byrow=TRUE)
-
 coexreg[coexreg %in% c("public","private","academic")]<-1
 coexreg[coexreg=="NA"]<-0
 coexreg<-as.data.frame(coexreg)
@@ -49,26 +48,37 @@ visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
        ylab="P(Private monitoring exist)",
        legend=FALSE,ylim=c(0,1))
 
+
+##############################################################################/
+#Combine plot for the supplementary FigureS1####
+##############################################################################/
+
 #the 3 plot combined
-op<-par(mfrow=c(1,3))
+op<-par(mfrow=c(1,3),mar=c(5.1,5,4.1,2.1))
 visreg(IDHacad.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Academic",
-       overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="Probability that an Academic monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Academic",cex=2))
+       overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
+       ylab="Probability that an Academic\nmonitoring system exists",
+       legend=FALSE,ylim=c(0,1),main=list("Academic RMS",cex=2),
+       line=list(col="black"),fill=list(col="grey70"))
 box()
+text(0.4,1.265,labels=c("A"),cex=4,xpd=TRUE,col="grey10")
 visreg(IDHpub.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Public",
-       overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="Probability that a Governmental monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Governmental",cex=2))
+       overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
+       ylab="Probability that a Governmental\nmonitoring system exists",
+       legend=FALSE,ylim=c(0,1),main=list("Governmental RMS",cex=2),
+       line=list(col="black"),fill=list(col="grey70"))
 box()
+text(0.4,1.265,labels=c("B"),cex=4,xpd=TRUE,col="grey10")
 visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
-       overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="Probability that a Private monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Private",cex=2))
+       overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
+       ylab="Probability that a Private\nmonitoring system exists",
+       legend=FALSE,ylim=c(0,1),main=list("Private RMS",cex=2),
+       line=list(col="black"),fill=list(col="grey70"))
 box()
+text(0.4,1.265,labels=c("C"),cex=4,xpd=TRUE,col="grey10")
 par(op)
 
-#export to a pdf 10 x 4 inches
+#export to a pdf 9 x 3 inches
 
 
 ##############################################################################/
@@ -81,11 +91,10 @@ usaPPP[usaPPP=="sale"]<-"sale_NA"
 #we make the hypothesis that "no" and "not_know" are equivalent to 
 #"no PPP monitoring at all"
 usaPPP[usaPPP=="no" | usaPPP=="not_known"]<-"NA_NA"
-
 usaPPP<-matrix(unlist(strsplit(usaPPP,"_")),
-               ncol=2,dimnames=list(data_pays$pays,c("Sale","Survey")),
+               ncol=2,
+               dimnames=list(data_pays$pays,c("Sale","Survey")),
                byrow=TRUE)
-
 usaPPP[usaPPP %in% c("sale","survey")]<-1
 usaPPP[usaPPP=="NA"]<-0
 usaPPP<-as.data.frame(usaPPP)
@@ -107,60 +116,30 @@ visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
        ylab="P(PPP survey monitoring exist)",
        legend=FALSE,ylim=c(0,1))
 
+
+##############################################################################/
+#Combine plot for the supplementary FigureS2####
+##############################################################################/
+
 #the 2 plot combined
-op<-par(mfrow=c(1,2),mar=c(5.1,5,4.1,2.1))
+op<-par(mfrow=c(1,3),mar=c(5.1,5,4.1,2.1))
 visreg(IDHsal.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Sale",
-       overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="Probability that a PPP\n sale monitoring exists",
-       legend=FALSE,ylim=c(0,1),main=list("Sale",cex=2))
+       overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
+       ylab="Probability that a PPP\nSales monitoring exists",
+       legend=FALSE,ylim=c(0,1),main=list("PPP Sales",cex=2),
+       line=list(col="black"),fill=list(col="grey70"))
 box()
+text(0.4,1.265,labels=c("A"),cex=4,xpd=TRUE,col="grey10")
 visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
-       overlay=TRUE,partial=FALSE,xlab="IDH",
-       ylab="Probability that a PPP\n survey monitoring exists",
-       legend=FALSE,ylim=c(0,1),main=list("Survey",cex=2))
-box()
-par(op)
-#export to a pdf 6.66 x 4 inches
-
-
-##############################################################################/
-#Combine plot for the supplementary figure S1####
-##############################################################################/
-
-op<-par(mfrow=c(2,3),mar=c(5.1,5,4.1,2.1))
-visreg(IDHacad.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Academic",
-       overlay=TRUE,partial=FALSE,xlab="HDI",
-       ylab="Probability that an Academic\n monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Academic RMS",cex=2),
-       line=list(col="black"),fill=list(col="grey70"))
-box()
-visreg(IDHpub.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Public",
-       overlay=TRUE,partial=FALSE,xlab="HDI",
-       ylab="Probability that a Governmental\n monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Governmental RMS",cex=2),
-       line=list(col="black"),fill=list(col="grey70"))
-box()
-visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
-       overlay=TRUE,partial=FALSE,xlab="HDI",
-       ylab="Probability that a Private\n monitoring system exists",
-       legend=FALSE,ylim=c(0,1),main=list("Private RMS",cex=2),
-       line=list(col="black"),fill=list(col="grey70"))
-box()
-visreg(IDHsal.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Sale",
-       overlay=TRUE,partial=FALSE,xlab="HDI",
-       ylab="Probability that a PPP\n sale monitoring exists",
-       legend=FALSE,ylim=c(0,1),main=list("PPP Sale",cex=2),
-       line=list(col="black"),fill=list(col="grey70"))
-box()
-visreg(IDHsurv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Survey",
-       overlay=TRUE,partial=FALSE,xlab="HDI",
-       ylab="Probability that a PPP\n survey monitoring exists",
+       overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
+       ylab="Probability that a PPP\nSurvey monitoring exists",
        legend=FALSE,ylim=c(0,1),main=list("PPP Survey",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
+text(0.4,1.265,labels=c("B"),cex=4,xpd=TRUE,col="grey10")
 par(op)
-#export to a pdf 11 x 7 inches
-#export to a pdf 9 x 6 inches for bigger plot
+
+#export to a pdf 9 x 3 inches
 
 
 ##############################################################################/
