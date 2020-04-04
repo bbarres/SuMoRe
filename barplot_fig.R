@@ -93,7 +93,7 @@ par(op)
 
 
 ##############################################################################/
-#Figure 4D: Sampling choice criteria method ~ monitoring device####
+#Figure 4C: Sampling choice criteria method ~ monitoring device####
 ##############################################################################/
 
 #picking a set of colors
@@ -109,7 +109,7 @@ var3<-tapply(data_monitoring$q_sampling_locations_randomly,
 table<-data.frame(Facteur1=rep(levels(
    data_monitoring$type_monitoring_par_repondant),3),
                   Facteur2=c(rep("Loss of efficacy",3),
-                             rep("Selection pressure",3),
+                             rep("According to PPP use",3),
                              rep("Randomly",3)),
                   Count=c(var1,var2,var3))
 #reordering the categories
@@ -129,16 +129,16 @@ axis(2,at=seq(0,70,10),labels=seq(0,70,10),lwd=4,las=1,font=2,cex.axis=1.1)
 box(bty="l",lwd=4)
 mtext(levels(LEVEL)[c(1,3,2)],at=c(1.7,6.1,10.6),line=1.5,cex=1.5,side=1)
 mtext("Monitoring system category", at=6.1, line=3,cex=2,side=1,font=2,padj=1)
-legend(6,75,legend=c("Loss of efficacy" , "Selection pressure" , "Randomly" ),
+legend(5,75,legend=c("Loss of efficacy","According to PPP use","Randomly"),
        pch=15,col=thecol,bg=thecol,bty="n",cex=1.3,pt.cex=1.4,xpd=TRUE,
-       y.intersp=2.5)
+       y.intersp=1.8)
 par(op)
 
 #export to a pdf 6 x 5 inches
 
 
 ##############################################################################/
-#Figure 4C: Frequence de publication ~ monitoring device####
+#Figure 4D: Frequence de publication ~ monitoring device####
 ##############################################################################/
 
 #picking a set of colors
@@ -149,7 +149,7 @@ VAR<-xtabs(~data_monitoring$q_frequence_publications_res+
               data_monitoring$type_monitoring_par_repondant)
 VAR<-c(VAR[c(3,1,5,2,4),1],VAR[c(3,1,5,2,4),3],VAR[c(3,1,5,2,4),2])+0.1
 
-#tracer diagramme en bâton
+#plotting the barplot
 op<-par(mar=c(6, 5, 1, 1) + 0.1)
 graf<-barplot(VAR,col=rep(thecol,3),ylim=c(0,70),
               ylab="Number of responses",cex.axis =1.3,cex.lab=2,
@@ -214,7 +214,10 @@ box(bty="l",lwd=4)
 mtext(levels(LEVEL)[c(1,3,2)],at=c(1.7,6.1,10.6),line=1.5,cex=1.5,side=1)
 mtext("Monitoring system category", at=6.1, line=3,cex=2,side=1,font=2,
       padj=1)
-legend(6.5,105,legend=c("Academics","Officials","Privates"),y.intersp=2.5,
+legend(5,105,legend=c("Academic experts",
+                      "Governmental experts",
+                      "Private experts"),
+       y.intersp=1.8,
        pch=15,col=thecol,bg=thecol,bty="n",cex=1.4,pt.cex=1.6,xpd=TRUE)
 par(op)
 
