@@ -38,7 +38,7 @@ In this section, you will find the list of the datasets used in this study. The 
 ## R scripts
 In this section, you will find the list of the different scripts used in the article with a brief description of their purpose. 
 + **dataloading.R**: the script to load the different datasets and the necessary package in the environment
-+ **LogRegMonito.R**: the script used for the regression analysis
++ **LogRegTests_ana.R**: the script used for the logistic regression analyses
 + **barplot_fig.R**: the script used for producing the barplot figures xxxxxxx
 + **boxplot_fig.R**: the script used for producing the boxplot figure xxxxxxx
 + **donutplot_fig.R**: the script used for producing the donutplot figure xxxxxxx
