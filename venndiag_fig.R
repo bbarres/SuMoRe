@@ -117,8 +117,8 @@ fitPriv<-euler(c(Academic=0,
                  "Academic&Governmental&Private"=0),
                shape=c("ellipse"),control=list(extraopt_threshold=0))
 plot(fitPriv,
-     quantities=list(col=c("black"),cex=2.5,font=2),
-     edges=list(col=colovec,lwd=10),
+     quantities=list(col=c("black"),cex=2.75,font=2),
+     edges=list(col=colovec,lwd=11),
      labels=FALSE,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
@@ -134,8 +134,8 @@ fitGov<-euler(c(Academic=0,
                 "Academic&Governmental&Private"=9),
              shape=c("ellipse"),control=list(extraopt_threshold=0))
 plot(fitGov,
-     quantities=list(col=c("black"),cex=2.5,font=2),
-     edges=list(col=colovec,lwd=10),
+     quantities=list(col=c("black"),cex=1.65,font=2),
+     edges=list(col=colovec,lwd=6.6),
      labels=FALSE,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
