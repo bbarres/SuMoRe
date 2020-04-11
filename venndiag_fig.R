@@ -107,7 +107,7 @@ plot(fitAca,
      legend=FALSE)
 #export to a pdf 4 x 4 inches
 
-#source of funding for Academic resistance monitoring system 
+#source of funding for Private resistance monitoring system 
 fitPriv<-euler(c(Academic=0,
                  Governmental=1,
                  Private=39,
@@ -117,14 +117,14 @@ fitPriv<-euler(c(Academic=0,
                  "Academic&Governmental&Private"=0),
                shape=c("ellipse"),control=list(extraopt_threshold=0))
 plot(fitPriv,
-     quantities=list(col=c("black"),cex=2.75,font=2),
-     edges=list(col=colovec,lwd=11),
+     quantities=list(col=c("black"),cex=3.8,font=2),
+     edges=list(col=colovec,lwd=15.1),
      labels=FALSE,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
 #export to a pdf 4 x 4 inches
 
-#source of funding for Academic resistance monitoring system 
+#source of funding for Governmental resistance monitoring system 
 fitGov<-euler(c(Academic=0,
                 Governmental=23,
                 Private=4,
@@ -134,8 +134,8 @@ fitGov<-euler(c(Academic=0,
                 "Academic&Governmental&Private"=9),
              shape=c("ellipse"),control=list(extraopt_threshold=0))
 plot(fitGov,
-     quantities=list(col=c("black"),cex=1.65,font=2),
-     edges=list(col=colovec,lwd=6.6),
+     quantities=list(col=c("black"),cex=3.4,font=2),
+     edges=list(col=colovec,lwd=13.7),
      labels=FALSE,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
