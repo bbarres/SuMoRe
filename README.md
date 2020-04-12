@@ -21,18 +21,46 @@ In this section, you will find the list of the datasets used in this study. The 
   + *q136_q137_UsagePPP*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. This is the combined information for all the respondant of one country. 
   
 + **20181114_data_repondant.csv**: the second dataset contains information about the respondant and their answers to questions related to PPP monitoring in their respective coutry. 
-  + *q160*: anonymised respondant ID. 
+  + *q160*: anonymized ID of the respondant. 
   + *q2*: country of the respondant. 
   + *q136-137.recodée*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. If the respondant did not answer to this question, the field is left blank. The respondant can also answer that he/she doesn't know the information. 
   + *Domaine_competences_repondant*: the type of pesticide classes of which the respondent claims to be knowledgeable. The value can be fungicide (*'fung'*), herbicide (*'herb'*), insecticide (*'ins'*) or any combination of the three classes. Missing data are indicated by *'NA'*. 
   + *mailles_sales_PPP_q142bis*: the within country geographical level at which the sales figures are collected. The value can be: *'country'*, *'region'*, *'sale location'*,*'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
   + *mailles_autres_donnees_usages_PPP_q153bis*: the within country geographical level at which the other method (ie different of sales figures) of PPP monitoring are collected. The value can be: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
-  + *mailles_données_usages_comb*: the combination of the two precedent fields. The value can be a combination of: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
+  + *mailles_données_usages_comb*: the combination of the two previous fields. The value can be a combination of: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
   + *continent*: the continent of the country of the respondant. 
   
-+ **20181121_data_monitoring.csv**: The third dataset contains...
-  + *first variable*: 
-  + *second variable*: 
++ **20181121_data_monitoring.csv**: the third set of data includes all the information from the questionnaires filled in by the respondents. Some of the fields of this dataset has been transformed from the raw data extracted straight from the questionnaires
+  + *q160*: anonymized ID of the respondant. 
+  + *pays*: country of the respondant. 
+  + *coexistence_pays*: combined type of RMS cited by the respondant. The value can be a combination of: *'public'*, *'private'*, *'academic'* and *'NA'* (for absence of one or the other RMS). 
+  + *q_objectives_*: what are the objectives of the RMS or combination of RMS. The value can be *'emergence'*, *'frequency of existing resistance'*, *'both'* and *'do not know'*. 
+  + *q_number_themes_*
+  + *bioag_surv_monitoring_comb*
+  + *q_related_registration_*
+  + *q_analysis_techniques_biotest_recodé*
+  + *q_analysis_techniques_biomolecular_recodé*
+  + *q_analysis_techniques_biochemical_recodé*
+  + *nb_analysis_techniques*
+  + *q_official_formalised_sampling_*
+  + *q_analyzes_and_interprets_the_data_Officials*
+  + *q_analyzes_and_interprets_the_data_Academics*
+  + *q_analyzes_and_interprets_the_data_Companies*
+  + *q_analyzes_and_interprets_the_data_Advisers*
+  + *q_analyzes_and_interprets_the_data_Distributors*
+  + *q_analyzes_and_interprets_the_data_other*
+  + *participation_financement_monitoring_nouvelle_version*
+  + *profil_repondant*
+  + *q_sampling_locations_randomly*
+  + *q_sampling_locations_selection_pressure*
+  + *q_sampling_locations_loss_efficacy*
+  + *q_sampling_locations_other*
+  + *q_moyens_collecte_data*
+  + *q_frequence_publications_res*
+  + *type_monitoring_par_repondant*
+  + *coexistence_chiffre*
+  + *q_nb_participant_choice*
+  + *q_nb_participant_analysis*
 
 
 ## R scripts
