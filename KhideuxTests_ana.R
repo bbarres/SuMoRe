@@ -41,15 +41,16 @@ mean(na.omit(data_monitoring$q_nb_participant_analysis))
 # Kruskal-Wallis chi-squared = 4.9436, df = 2, p-value = 0.08443
 
 
+##############################################################################/
+#Chisquare Tests####
+##############################################################################/
 
-###########################
-#    Tests                #
-###########################
 #http://forums.cirad.fr/logiciel-R/viewtopic.php?t=2231 
 #http://pbil.univ-lyon1.fr/R/pdf/qrc.pdf
 #https://alea.fr.eu.org/git/doc_khi2.git/blob_plain/HEAD:/khi2.pdf
 #http://grasland.script.univ-paris-diderot.fr/STAT98/stat98_8/stat98_8.htm
 #http://mehdikhaneboubi.free.fr/stat/co/khi_deux_r.html
+
 
 ###Test 3.1.4
 data_pays$coexistence_chiffre<-""
@@ -60,6 +61,7 @@ data_pays$coexistence_chiffre<-ifelse(data_pays$coexistence_pays %in% c("NA_NA_N
 tmp<-data_pays[-which(data_pays$q136_q137_UsagePPP %in% c("not_known")),]
 tmp2<-dcast(tmp,coexistence_chiffre~q136_q137_UsagePPP)
 chisq.test(tmp2[,3:4],simulate.p.value = TRUE)
+
 
 ####Test - 3.2.1
 #Objectives
@@ -78,6 +80,7 @@ tmp$random_sampling<-ifelse(tmp$q_sampling_locations_randomly=="1","1","0")
 tmp2<-dcast(tmp,type_monitoring_par_repondant~random_sampling)
 chisq.test(tmp2[,2:3])
 
+
 ####Test -3.2.2. 
 tmp<-data_monitoring[-which(paste(data_monitoring$q_analysis_techniques_biotest_recodé,
                                   data_monitoring$q_analysis_techniques_biomolecular_recodé,
@@ -85,10 +88,12 @@ tmp<-data_monitoring[-which(paste(data_monitoring$q_analysis_techniques_biotest_
 tmp2<-dcast(tmp,type_monitoring_par_repondant~q_analysis_techniques_biotest_recodé+q_analysis_techniques_biomolecular_recodé+q_analysis_techniques_biochemical_recodé)
 chisq.test(tmp2[,2:8],simulate.p.value = TRUE)#/!\ effectifs trop faibles ?
 
+
 ####Test - 3.2.3
 tmp<-data_monitoring[-which(data_monitoring$q_official_formalised_sampling_ %in% c("","do not know") | data_monitoring$q_related_registration_ %in% c("","do not know")),]
 tmp2<-dcast(tmp,q_official_formalised_sampling_~q_related_registration_)
 chisq.test(tmp2[,2:3])
+
 
 ####Test - 3.2.4
 tmp<-data_monitoring[which(data_monitoring$q_frequence_publications_res!=""),]
@@ -96,6 +101,7 @@ tmp$publication<-""
 tmp$publication<-ifelse(tmp$q_frequence_publications_res == "not published","0","1")
 tmp2<-dcast(tmp,type_monitoring_par_repondant~publication)
 chisq.test(tmp2[,2:3],simulate.p.value = TRUE)#/!\ effectifs trop faibles ?
+
 
 ####Test - 3.2.5
 tmp<-data_monitoring[which(data_monitoring$participation_financement_monitoring_nouvelle_version!=""),]
@@ -132,7 +138,6 @@ tmp2<-dcast(tmp,type_monitoring_par_repondant~multi_mono_categories)
 chisq.test(tmp2[,2:3],simulate.p.value = TRUE)
 
 
-
 ####Test - 3.3.3
 #on sélectionne les lignes où il y a au moins une réponse sur les variables analyses et interprétation des données
 tmp<-data_monitoring[-which(paste(data_monitoring$q_analyzes_and_interprets_the_data_Academics,
@@ -150,8 +155,6 @@ tmp$auto_analyse_data[which(tmp$type_monitoring_par_repondant=="Private" & tmp$q
 table(tmp$auto_analyse_data)
 tmp2<-dcast(tmp,type_monitoring_par_repondant~auto_analyse_data)
 chisq.test(tmp2[,2:3],simulate.p.value = TRUE)
-
-
 
 
 ##############################################################################/
