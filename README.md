@@ -30,31 +30,31 @@ In this section, you will find the list of the datasets used in this study. The 
   + *mailles_données_usages_comb*: the combination of the two previous fields. The value can be a combination of: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
   + *continent*: the continent of the country of the respondant. 
   
-+ **20181121_data_monitoring.csv**: the third set of data includes all the information from the questionnaires filled in by the respondents. Some of the fields of this dataset has been transformed from the raw data extracted straight from the questionnaires. For each respondant, there could be up to three entries, one for each category of RMS the respondant fielded information for. 
++ **20181121_data_monitoring.csv**: the third dataset includes all the information from the questionnaires filled in by the respondants. Some of the fields of this dataset has been transformed from the raw data extracted straight from the questionnaires. For each respondant, there could be up to three entries, one for each category of Resistance Monitoring System (RMS) the respondant fielded information for. 
   + *q160*: anonymized ID of the respondant. 
   + *pays*: country of the respondant. 
   + *coexistence_pays*: combined type of RMS cited by the respondant. The value can be a combination of: *'public'*, *'private'*, *'academic'* and *'NA'* (for absence of one or the other RMS). 
   + *q_objectives_*: what are the objectives of the RMS or combination of RMS. The value can be *'emergence'*, *'frequency of existing resistance'*, *'both'* and *'do not know'*. 
   + *q_number_themes_*: number of themes investigated per year in the country according to the respondant. When the respondant didn't answer, the field is let empty. 
   + *bioag_surv_monitoring_comb*: pest categories monitored in the country according to the respondant. *'1'* = insects, *'10'* = weeds, *'100'* = fungi, *'101'* = fungi and insects, *'110'* = fungi + weeds, *'111'* = fungi + weeds + insects and *'NANANA'* = no response. 
-  + *q_related_registration_*: is the monitoring related to the registration process? Possible values are *'yes'*, *'no'* or *'do not know'*. 
+  + *q_related_registration_*: is the RMS related to the registration process? Possible values are *'yes'*, *'no'* or *'do not know'*. 
   + *q_analysis_techniques_biotest_recodé*: can biossays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes. 
   + *q_analysis_techniques_biomolecular_recodé*: can biomolecular assays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes.
   + *q_analysis_techniques_biochemical_recodé*: can biochemical assays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes.
   + *nb_analysis_techniques*: the number of different categories of assays used for the monitoring system, according to the respondant. 
-  + *q_official_formalised_sampling_*: Is there on official formalization of the sampling procedure? Possible values are *'yes'*, *'no'* or *'do not know'*.
-  + *q_analyzes_and_interprets_the_data_Officials*: Are governmental involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_Academics*: Are academics involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_Companies*: Are private involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_official_formalised_sampling_*: Is there on official formalization of the sampling procedure for the RMS according to the respondant? Possible values are *'yes'*, *'no'* or *'do not know'*.
+  + *q_analyzes_and_interprets_the_data_Officials*: Are governmental involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_analyzes_and_interprets_the_data_Academics*: Are academics involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_analyzes_and_interprets_the_data_Companies*: Are private involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
   + *q_analyzes_and_interprets_the_data_Advisers*: Are advisers involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
   + *q_analyzes_and_interprets_the_data_Distributors*: Are distributors involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_other*: Are other stakeholders involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
-  + *participation_financement_monitoring_nouvelle_version*: 
-  + *profil_repondant*: 
-  + *q_sampling_locations_randomly*: 
-  + *q_sampling_locations_selection_pressure*: 
-  + *q_sampling_locations_loss_efficacy*: 
-  + *q_sampling_locations_other*: 
+  + *q_analyzes_and_interprets_the_data_other*: Are other stakeholders involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
+  + *participation_financement_monitoring_nouvelle_version*: categories of stakeholders involved in financing the RMS according to the respondant. Possible values are *'Academic'*, *'Private'*, *'Public'* or any combinations of the previous values. The field is left empty if the information was missing. 
+  + *profil_repondant*: which category of stakeholder the respondant belongs to? Possible values are *'Academic'*, *'Company'*, *'Official'* or *'Other'*. 
+  + *q_sampling_locations_randomly*: Are the locations for the RMS were sampled randomly, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_sampling_locations_selection_pressure*: Are the locations for the RMS were based on selection pressure, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_sampling_locations_loss_efficacy*: Are the locations for the RMS were sampled based on the observation of a loss of efficacy in the field, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_sampling_locations_other*: Are the locations for the RMS were sampled in a based on other strategy, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
   + *q_moyens_collecte_data*: 
   + *q_frequence_publications_res*: 
   + *type_monitoring_par_repondant*: 
