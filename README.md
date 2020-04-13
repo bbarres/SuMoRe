@@ -57,10 +57,10 @@ In this section, you will find the list of the datasets used in this study. The 
   + *q_sampling_locations_other*: Are the locations for the RMS were sampled in a based on other strategy, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
   + *q_moyens_collecte_data*: which media are used to record the data? Possible values are *'paper'*, *'electronic'*, missing data *'NA'* or any combination of the previous values. 
   + *q_frequence_publications_res*: how often are the results published? Possible value are *'during cropping season'* if the results are published during the cropping season, *'yearly'* if the results are published once a year, *'less frequently'* if the results are published less than once a year, *'other'* if the results are published at another frequency and *'not published'* if the results are never made publicly available, according to the respondant. Missing value are indicated with *'NA'*. 
-  + *type_monitoring_par_repondant*: which type of RMS the 
-  + *coexistence_chiffre*: 
-  + *q_nb_participant_choice*: 
-  + *q_nb_participant_analysis*: 
+  + *type_monitoring_par_repondant*: which type of RMS the entry was completed for by the respondant. Possible values are *'Academic'*, *'Private'* or *'Public'* 
+  + *coexistence_chiffre*: Number of coexisting RMS catefories in the country according to the respondant. 
+  + *q_nb_participant_choice*: Number of different categories of stakeholders that take part in the choice of the themes included in the RMS. 
+  + *q_nb_participant_analysis*: Number of stakeholders that take part in the analyses of the RMS. 
 
 
 ## R scripts
