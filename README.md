@@ -39,25 +39,25 @@ In this section, you will find the list of the datasets used in this study. The 
   + *bioag_surv_monitoring_comb*: pest categories monitored in the country according to the respondant. *'1'* = insects, *'10'* = weeds, *'100'* = fungi, *'101'* = fungi and insects, *'110'* = fungi + weeds, *'111'* = fungi + weeds + insects and *'NANANA'* = no response. 
   + *q_related_registration_*: is the RMS related to the registration process? Possible values are *'yes'*, *'no'* or *'do not know'*. 
   + *q_analysis_techniques_biotest_recodé*: can biossays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes. 
-  + *q_analysis_techniques_biomolecular_recodé*: can biomolecular assays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analysis_techniques_biochemical_recodé*: can biochemical assays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_analysis_techniques_biomolecular_recodé*: can biomolecular assays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_analysis_techniques_biochemical_recodé*: can biochemical assays be used for the monitoring? Possible values are *'0'* = no and *'1'* = yes. 
   + *nb_analysis_techniques*: the number of different categories of assays used for the monitoring system, according to the respondant. 
-  + *q_official_formalised_sampling_*: Is there on official formalization of the sampling procedure for the RMS according to the respondant? Possible values are *'yes'*, *'no'* or *'do not know'*.
-  + *q_analyzes_and_interprets_the_data_Officials*: Are governmental involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_Academics*: Are academics involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_Companies*: Are private involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_Advisers*: Are advisers involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_Distributors*: Are distributors involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_analyzes_and_interprets_the_data_other*: Are other stakeholders involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
+  + *q_official_formalised_sampling_*: Is there on official formalization of the sampling procedure for the RMS according to the respondant? Possible values are *'yes'*, *'no'* or *'do not know'*. 
+  + *q_analyzes_and_interprets_the_data_Officials*: Are governmental involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_analyzes_and_interprets_the_data_Academics*: Are academics involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_analyzes_and_interprets_the_data_Companies*: Are private involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_analyzes_and_interprets_the_data_Advisers*: Are advisers involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_analyzes_and_interprets_the_data_Distributors*: Are distributors involved in the analyzis and interpretation of the data produce by the monitoring system? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_analyzes_and_interprets_the_data_other*: Are other stakeholders involved in the analyzis and interpretation of the data produce by the RMS, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
   + *participation_financement_monitoring_nouvelle_version*: categories of stakeholders involved in financing the RMS according to the respondant. Possible values are *'Academic'*, *'Private'*, *'Public'* or any combinations of the previous values. The field is left empty if the information was missing. 
   + *profil_repondant*: which category of stakeholder the respondant belongs to? Possible values are *'Academic'*, *'Company'*, *'Official'* or *'Other'*. 
-  + *q_sampling_locations_randomly*: Are the locations for the RMS were sampled randomly, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_sampling_locations_selection_pressure*: Are the locations for the RMS were based on selection pressure, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_sampling_locations_loss_efficacy*: Are the locations for the RMS were sampled based on the observation of a loss of efficacy in the field, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_sampling_locations_other*: Are the locations for the RMS were sampled in a based on other strategy, according to the respondant? Possible values are *'0'* = no and *'1'* = yes.
-  + *q_moyens_collecte_data*: 
-  + *q_frequence_publications_res*: 
-  + *type_monitoring_par_repondant*: 
+  + *q_sampling_locations_randomly*: Are the locations for the RMS were sampled randomly, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_sampling_locations_selection_pressure*: Are the locations for the RMS were based on selection pressure, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_sampling_locations_loss_efficacy*: Are the locations for the RMS were sampled based on the observation of a loss of efficacy in the field, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_sampling_locations_other*: Are the locations for the RMS were sampled in a based on other strategy, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
+  + *q_moyens_collecte_data*: which media are used to record the data? Possible values are *'paper'*, *'electronic'*, missing data *'NA'* or any combination of the previous values. 
+  + *q_frequence_publications_res*: how often are the results published? Possible value are *'during cropping season'* if the results are published during the cropping season, *'yearly'* if the results are published once a year, *'less frequently'* if the results are published less than once a year, *'other'* if the results are published at another frequency and *'not published'* if the results are never made publicly available, according to the respondant. Missing value are indicated with *'NA'*. 
+  + *type_monitoring_par_repondant*: which type of RMS the 
   + *coexistence_chiffre*: 
   + *q_nb_participant_choice*: 
   + *q_nb_participant_analysis*: 
