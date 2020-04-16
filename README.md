@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/158614822.svg)](https://zenodo.org/badge/latestdoi/158614822)
 
-# Supporting code and data for: Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity
+# Supporting data and code for: Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity
 *This repository contains the R code used for the data analyses and production of the figures of the related article*
 
 ![alt text](https://vy7bgw.db.files.1drv.com/y4mJcCXlpEQlZMq8mdAu7b8K9pAc2N3boQ0iHSWn7cREMnjbGu5gK6GN6kIKv2LL5keC8Owf4SR-42JjveGIyxCv_zIyeiYiNByIBwWocLjOE6ictf_lu-Sjv-hhGo5AMhAkOZydDdqd6wRrOgbOPYguZAP5y9CNEpH_q6z3i4Dj9Zvcyxzi3o-iXj5_cQLBi53AXTp6-cEPoKxU8n3vdG5OQ?width=1584&height=588&cropmode=none)
@@ -10,9 +10,9 @@
 Some general information on the survey and the main aims of the study. Basically, exploring the monitoring system of pesticide resistance in the world. 
 
 ## Datasets
-In this section, you will find the list of the datasets used in this study. The data files can be found in the ***data*** folder. For the data tables, the name of the different variables are listed and explained as well. 
+In this section, you will find the list of the datasets used in this study. The data files can be found in the "data" folder. For the data tables, the name of the different variables are listed and explained as well. 
 
-+ **20181211_data_pays.csv**: the first dataset contains information about countries for which there was at least one respondant to the survey. It sums up the number of classes of pests that are monitored, the type of usage information available in the different countries and some information linked to the development level of the countries. 
++ **20181211_data_pays.csv:** the first dataset contains information about countries for which there was at least one respondant to the survey. It sums up the number of classes of pests that are monitored, the type of usage information available in the different countries and some information linked to the development level of the countries. 
   + *pays*: name of the country. 
   + *coexistence_pays*: type of monitoring cited at least once by the survey's respondant. 
   + *Indice.Dvpt.Humain*: value of the Human Development Index (HDI) as of 2019. 
@@ -20,7 +20,7 @@ In this section, you will find the list of the datasets used in this study. The 
   + *nb_bioagr_surv*: number of pests surveyed in the country according to the survey's respondant. 
   + *q136_q137_UsagePPP*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. This is the combined information for all the respondant of one country. 
   
-+ **20181114_data_repondant.csv**: the second dataset contains information about the respondant and their answers to questions related to PPP monitoring in their respective coutry. 
++ **20181114_data_repondant.csv:** the second dataset contains information about the respondant and their answers to questions related to PPP monitoring in their respective coutry. 
   + *q160*: anonymized ID of the respondant. 
   + *q2*: country of the respondant. 
   + *q136-137.recodée*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. If the respondant did not answer to this question, the field is left empty. The respondant can also answer that he/she doesn't know the information. 
@@ -30,7 +30,7 @@ In this section, you will find the list of the datasets used in this study. The 
   + *mailles_données_usages_comb*: the combination of the two previous fields. The value can be a combination of: *'country'*, *'region'*, *'sale location'*, *'postal code of the user'*, *'do not know'* and *'other'*. Missing data are indicated by *'NA'*. 
   + *continent*: the continent of the country of the respondant. 
   
-+ **20181121_data_monitoring.csv**: the third dataset includes all the information from the questionnaires filled in by the respondants. Some of the fields of this dataset has been transformed from the raw data extracted straight from the questionnaires. For each respondant, there could be up to three entries, one for each category of Resistance Monitoring System (RMS) the respondant fielded information for. 
++ **20181121_data_monitoring.csv:** the third dataset includes all the information from the questionnaires filled in by the respondants. Some of the fields of this dataset has been transformed from the raw data extracted straight from the questionnaires. For each respondant, there could be up to three entries, one for each category of Resistance Monitoring System (RMS) the respondant fielded information for. 
   + *q160*: anonymized ID of the respondant. 
   + *pays*: country of the respondant. 
   + *coexistence_pays*: combined type of RMS cited by the respondant. The value can be a combination of: *'public'*, *'private'*, *'academic'* and *'NA'* (for absence of one or the other RMS). 
@@ -65,15 +65,19 @@ In this section, you will find the list of the datasets used in this study. The 
 
 ## R scripts
 In this section, you will find the list of the different scripts used in the article with a brief description of their purpose. 
-+ **dataloading.R**: the script to load the different datasets and the necessary package in the environment. 
-+ **LogRegTests_ana.R**: the script used for the logistic regression analyses. It also contains the code for the Figures S1 and S2. 
-+ **KhideuxTests_ana.R**: the script used for the chisquare tests used throughout the manuscript. 
-+ **maprespondant_fig.R**: the script used for producing the map Figure 2A. 
-+ **barplot_fig.R**: the script used for producing the barplot Figure 2B, Figure 2C, Figure 2D, Figure 4C, Figure 4D and Figure 5C. 
-+ **venndiag_fig.R**: the script used for producing the Venn's diagram Figure 4A and Figure 5A.
-+ **stacked_fig.R**: the script used for producing the stackedbar Figure 3A, Figure 3B, Figure 3C and Figure 4B. 
-+ **boxplot_fig.R**: the script used for producing the boxplot Figure 5B. 
-+ **donutplot_fig.R**: the script used for producing the donutplot Figure 5D. 
++ **dataloading.R:** the script to load the different datasets and the necessary package in the environment. 
++ **LogRegTests_ana.R:** the script used for the logistic regression analyses. It also contains the code for the Figures S1 and S2. 
++ **KhideuxTests_ana.R:** the script used for the chisquare tests used throughout the manuscript. 
++ **maprespondant_fig.R:** the script used for producing the map Figure 2A. 
++ **barplot_fig.R:** the script used for producing the barplot Figure 2B, Figure 2C, Figure 2D, Figure 4C, Figure 4D and Figure 5C. 
++ **venndiag_fig.R:** the script used for producing the Venn's diagram Figure 4A and Figure 5A.
++ **stacked_fig.R:** the script used for producing the stackedbar Figure 3A, Figure 3B, Figure 3C and Figure 4B. 
++ **boxplot_fig.R:** the script used for producing the boxplot Figure 5B. 
++ **donutplot_fig.R:** the script used for producing the donutplot Figure 5D. 
+
+
+## Authors
+Benoit Barrès wrote the first draft of **dataloading.R**, **LogRegTests_ana.R**, **venndiag_fig.R** and **stacked_fig.R**. Christophe Plantamp wrote the first draft of **barplot_fig.R** and **donutplot_fig.R**. Pauline de Jerphanion wrote the first draft of  **KhideuxTests_ana.R**, **maprespondant_fig.R** and **boxplot_fig.R**. Benoit Barrès revised, edited, homogenized and commented the final version of the code and handle the github repository.
 
 
 ## Citation
@@ -81,4 +85,4 @@ You can cite cite the related study as follow:
 + R4P [Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity. *in preparation*.]()
 
 If you want to use (some of) the code found on this page or if you want to cite this repository: 
-+ Benoit Barrès, Christophe Plantamp and Pauline de Jerphanion. bbarres/SuMoRe: [Supporting code and data for: Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity. Zenodo; 2020.](https://zenodo.org/badge/latestdoi/158614822)
++ Benoit Barrès, Christophe Plantamp and Pauline de Jerphanion. bbarres/SuMoRe: [Supporting data and code for: Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity. Zenodo; 2020.](https://zenodo.org/badge/latestdoi/158614822)
