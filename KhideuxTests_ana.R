@@ -4,6 +4,7 @@
 ##############################################################################/
 ##############################################################################/
 
+#this code was written by Pauline de Jerphanion
 #loading the packages necessary for the analysis
 source("dataloading.R")
 library(reshape2)

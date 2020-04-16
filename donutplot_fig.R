@@ -4,6 +4,7 @@
 ##############################################################################/
 ##############################################################################/
 
+#this code was written by Christophe Plantamp
 #loading the packages necessary for the analysis
 library(RColorBrewer)
 library(plotrix)
@@ -32,8 +33,7 @@ AA$x<-AA$x[-c(1:2,9)]
 AA$y<-AA$y[-c(1:2,9)]
 AA$number<-AA$number[-c(1:2,9)]
 
-#double boucle de 1 à 3 pour chaque categorie (abscisse et ordonnée) 
-#et fait le compte de chaque modalité de coex par coordonnées
+#counting the number for each 'pest categories' x 'RMS in country categories'
 Count_coex<-data.frame(x=numeric(0),y=numeric(0), NA_NA_academic=character(0),
                        NA_NA_NA=character(0),NA_private_academic=character(0),
                        NA_private_NA=character(0),
@@ -57,7 +57,7 @@ colnames(Prop)<-c("x","y","Academic","Governmental","Private",
 
 
 ##############################################################################/
-#Figure X: Donut plot####
+#Figure 5D: Donut plot####
 ##############################################################################/
 
 #setting a color palette
