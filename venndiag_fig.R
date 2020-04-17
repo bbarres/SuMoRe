@@ -72,6 +72,7 @@ Kpil
 #chosing a set of colors
 colovec<-brewer.pal(7,"Dark2")[c(5,6,7)]
 
+##############################################################################/
 #source of funding for all types of resistance monitoring system 
 fit<-euler(c(Academic=23,
              Governmental=36,
@@ -90,6 +91,8 @@ plot(fit,
                  col.text="transparent"))
 #export to a pdf 8 x 6 inches
 
+
+##############################################################################/
 #source of funding for Academic resistance monitoring system 
 fitAca<-euler(c(Academic=23,
                 Governmental=12,
@@ -107,6 +110,8 @@ plot(fitAca,
      legend=FALSE)
 #export to a pdf 4 x 4 inches
 
+
+##############################################################################/
 #source of funding for Private resistance monitoring system 
 fitPriv<-euler(c(Academic=0,
                  Governmental=1,
@@ -124,6 +129,8 @@ plot(fitPriv,
      legend=FALSE)
 #export to a pdf 4 x 4 inches
 
+
+##############################################################################/
 #source of funding for Governmental resistance monitoring system 
 fitGov<-euler(c(Academic=0,
                 Governmental=23,
