@@ -7,7 +7,8 @@
 
 
 ## Context
-Some general information on the survey and the main aims of the study. Basically, exploring the monitoring system of pesticide resistance in the world. 
+In this study, we explore the diversity and features of the pesticide Resistance Monitoring Systems (RMS) of multiple coutries around the world. A survey was realized using a questionnaire send to experts in herbicides, fungicides and insecticides resistance in numerous countries. Based on a classification of RMS into three categories (Academic, Governmental and Private), we investigate the characteristics, structure and interactions between RMS and try to depict the landscape of the pesticide RMS in today globalized world. 
+
 
 ## Datasets
 In this section, you will find the list of the datasets used in this study. The data files can be found in the "data" folder. For the data tables, the name of the different variables are listed and explained as well. 
@@ -57,7 +58,7 @@ In this section, you will find the list of the datasets used in this study. The 
   + *q_sampling_locations_other*: Are the locations for the RMS were sampled in a based on other strategy, according to the respondant? Possible values are *'0'* = no and *'1'* = yes. 
   + *q_moyens_collecte_data*: which media are used to record the data? Possible values are *'paper'*, *'electronic'*, missing data *'NA'* or any combination of the previous values. 
   + *q_frequence_publications_res*: how often are the results published? Possible value are *'during cropping season'* if the results are published during the cropping season, *'yearly'* if the results are published once a year, *'less frequently'* if the results are published less than once a year, *'other'* if the results are published at another frequency and *'not published'* if the results are never made publicly available, according to the respondant. Missing value are indicated with *'NA'*. 
-  + *type_monitoring_par_repondant*: which type of RMS the entry was completed for by the respondant. Possible values are *'Academic'*, *'Private'* or *'Public'* 
+  + *type_monitoring_par_repondant*: which type of RMS the entry was completed for by the respondant. Possible values are *'Academic'*, *'Private'* or *'Public'*. 
   + *coexistence_chiffre*: Number of coexisting RMS catefories in the country according to the respondant. 
   + *q_nb_participant_choice*: Number of different categories of stakeholders that take part in the choice of the themes included in the RMS. 
   + *q_nb_participant_analysis*: Number of stakeholders that take part in the analyses of the RMS. 
@@ -77,7 +78,7 @@ In this section, you will find the list of the different scripts used in the art
 
 
 ## Authors
-Benoit Barrès wrote the first draft of **dataloading.R**, **LogRegTests_ana.R**, **venndiag_fig.R** and **stacked_fig.R**. Christophe Plantamp wrote the first draft of **barplot_fig.R** and **donutplot_fig.R**. Pauline de Jerphanion wrote the first draft of  **KhideuxTests_ana.R**, **maprespondant_fig.R** and **boxplot_fig.R**. Benoit Barrès revised, edited, homogenized and commented the final version of the code and handle the github repository.
+Benoit Barrès wrote the first draft of **dataloading.R**, **LogRegTests_ana.R**, **venndiag_fig.R** and **stacked_fig.R**. Christophe Plantamp wrote the first draft of **barplot_fig.R** and **donutplot_fig.R**. Pauline de Jerphanion wrote the first draft of  **KhideuxTests_ana.R**, **maprespondant_fig.R** and **boxplot_fig.R**. Benoit Barrès revised, edited, homogenized and commented the final version of the code and handled the github repository.
 
 
 ## Citation
