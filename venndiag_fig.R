@@ -72,8 +72,11 @@ Kpil
 #chosing a set of colors
 colovec<-brewer.pal(7,"Dark2")[c(5,6,7)]
 
+
 ##############################################################################/
-#source of funding for all types of resistance monitoring system 
+#5A - source of funding for all types of resistance monitoring system####
+##############################################################################/
+
 fit<-euler(c(Academic=23,
              Governmental=36,
              Private=55,
@@ -89,11 +92,14 @@ plot(fit,
      fills=list(fill=colovec,alpha=0.3),
      legend=list(labels=list("","",""),nrow=3,alpha=1,cex=1.5,vgap=3,
                  col.text="transparent"))
+
 #export to a pdf 8 x 6 inches
 
 
 ##############################################################################/
-#source of funding for Academic resistance monitoring system 
+#5A - source of funding for Academic resistance monitoring system####
+##############################################################################/
+
 fitAca<-euler(c(Academic=23,
                 Governmental=12,
                 Private=12,
@@ -108,11 +114,14 @@ plot(fitAca,
      labels=FALSE,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
+
 #export to a pdf 4 x 4 inches
 
 
 ##############################################################################/
-#source of funding for Private resistance monitoring system 
+#5A - source of funding for Private resistance monitoring system####
+##############################################################################/
+
 fitPriv<-euler(c(Academic=0,
                  Governmental=1,
                  Private=39,
@@ -127,11 +136,14 @@ plot(fitPriv,
      labels=FALSE,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
+
 #export to a pdf 4 x 4 inches
 
 
 ##############################################################################/
-#source of funding for Governmental resistance monitoring system 
+#5A - source of funding for Governmental resistance monitoring system####
+##############################################################################/
+
 fitGov<-euler(c(Academic=0,
                 Governmental=23,
                 Private=4,
@@ -146,6 +158,7 @@ plot(fitGov,
      labels=FALSE,
      fills=list(fill=colovec,alpha=0.3),
      legend=FALSE)
+
 #export to a pdf 4 x 4 inches
 
 
