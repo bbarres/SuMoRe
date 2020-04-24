@@ -134,15 +134,15 @@ tmp$auto_financement[which(
   & (grepl("public",
            tmp$participation_financement_monitoring_nouvelle_version)==TRUE 
      | grepl("Public",
-             tmp$participation_financement_monitoring_nouvelle_version)==TRUE))]<-"1"
+     tmp$participation_financement_monitoring_nouvelle_version)==TRUE))]<-"1"
 tmp$auto_financement[which(
   tmp$type_monitoring_par_repondant=="Academic"
   & grepl("Academic",
-          tmp$participation_financement_monitoring_nouvelle_version)==TRUE)]<-"1"
+      tmp$participation_financement_monitoring_nouvelle_version)==TRUE)]<-"1"
 tmp$auto_financement[which(
   tmp$type_monitoring_par_repondant=="Private" 
   & grepl("Private",
-          tmp$participation_financement_monitoring_nouvelle_version)==TRUE)]<-"1"
+      tmp$participation_financement_monitoring_nouvelle_version)==TRUE)]<-"1"
 table(tmp$auto_financement)
 tmp3<-dcast(tmp, type_monitoring_par_repondant~auto_financement)
 chisq.test(tmp3[,2:3],simulate.p.value = TRUE)
