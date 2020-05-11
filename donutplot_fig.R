@@ -34,8 +34,10 @@ AA$y<-AA$y[-c(1:2,9)]
 AA$number<-AA$number[-c(1:2,9)]
 
 #counting the number for each 'pest categories' x 'RMS in country categories'
-Count_coex<-data.frame(x=numeric(0),y=numeric(0), NA_NA_academic=character(0),
-                       NA_NA_NA=character(0),NA_private_academic=character(0),
+Count_coex<-data.frame(x=numeric(0),y=numeric(0),
+                       NA_NA_academic=character(0),
+                       NA_NA_NA=character(0),
+                       NA_private_academic=character(0),
                        NA_private_NA=character(0),
                        public_NA_academic=character(0),
                        public_NA_NA=character(0),
@@ -44,7 +46,7 @@ Count_coex<-data.frame(x=numeric(0),y=numeric(0), NA_NA_academic=character(0),
 Titre<-colnames(Count_coex)
 for(i in 1:3){
   for(j in 1:3){
-    EXTRACT<-data[data$divCoex==i&data$nb_bioagr_surv==j,]
+    EXTRACT<-data[data$divCoex==i & data$nb_bioagr_surv==j,]
     Count_coex<-rbind(Count_coex,(c(i,j,table(EXTRACT$coexistence_pays))))
   }
 }
