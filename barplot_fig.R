@@ -6,7 +6,6 @@
 
 #this code was written by Christophe Plantamp
 #loading the packages necessary for the analysis
-library(RColorBrewer)
 source("dataloading.R")
 
 

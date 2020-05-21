@@ -4,12 +4,7 @@
 ##############################################################################/
 ##############################################################################/
 
-#loading the packages necessary for the analysis
-library(eulerr)
-library(RColorBrewer)
-library(devtools)
-install_github('johannesbjork/LaCroixColoR')
-library(LaCroixColoR)
+#loading the packages and data necessary for the analysis
 source("dataloading.R")
 
 

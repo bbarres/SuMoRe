@@ -5,9 +5,7 @@
 ##############################################################################/
 
 #this code was written by Christophe Plantamp
-#loading the packages necessary for the analysis
-library(RColorBrewer)
-library(plotrix)
+#loading the packages and data necessary for the analysis
 source("dataloading.R")
 
 

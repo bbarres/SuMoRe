@@ -13,9 +13,8 @@
 #http://grasland.script.univ-paris-diderot.fr/STAT98/stat98_8/stat98_8.htm
 #http://mehdikhaneboubi.free.fr/stat/co/khi_deux_r.html
 
-#loading the packages necessary for the analysis
+#loading the packages and data necessary for the analysis
 source("dataloading.R")
-library(reshape2)
 
 
 ##############################################################################/

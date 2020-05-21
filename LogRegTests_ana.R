@@ -4,9 +4,7 @@
 ##############################################################################/
 ##############################################################################/
 
-#loading the packages necessary for the analysis
-library(RColorBrewer)
-library(visreg)
+#loading packages and data necessary for the analysis
 source("dataloading.R")
 
 

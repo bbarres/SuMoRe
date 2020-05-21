@@ -6,17 +6,7 @@
 
 #this code was originaly written by Pauline De Jerphanion and modified by
 #Benoit Barrès
-
-#loading the packages necessary for the analysis
-library(rworldmap)
-library(classInt)
-library(RColorBrewer)
-library(ggplot2)
-library(reshape2)
-library(rgdal)
-library(rgeos)
-
-#and the data
+#loading the packages and the data necessary for the analysis
 source("dataloading.R")
 
 

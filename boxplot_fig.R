@@ -5,10 +5,7 @@
 ##############################################################################/
 
 #this code was written by Pauline De Jerphanion
-#loading the packages necessary for the analysis
-library(RColorBrewer)
-library(reshape2)
-#and the data
+#loading the packages and the data necessary for the analysis
 source("dataloading.R")
 
 
