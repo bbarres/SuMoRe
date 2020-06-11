@@ -66,15 +66,16 @@ thecol<-brewer.pal(7,"Dark2")[7:1]
 #here comes the plotting
 def.par<-par(no.readonly=TRUE)
 layout(cbind(1,2),widths=c(9,3))
-op<-par(mar=c(6.1,4.1,1,0.1))
+op<-par(mar=c(6.5,6.5,1,0.5) + 0.1,xpd=TRUE)
 plot(AA$x,AA$y,pch=16,col="white",xlim=c(0.5,3.2),ylim=c(0.5,3.5),
      axes=FALSE,ann=FALSE,
      xaxp=c(1,3,2),yaxp=c(1,3,2),xaxt="n",yaxt="n",bty="n",cex.lab=1.2,
      font.lab=2,asp=1)
 title(main=NULL,
-      xlab="Number of categories of\nmonitoring system in the country",
+      xlab="Number of RMS\ncategories in the country",
       cex.lab=1.5,line=4,font.lab=2,xpd=NA)
-title(main=NULL,ylab="Number of pest categories",cex.lab=1.5,
+title(main=NULL,ylab="Number of surveyed\npest types in the country",
+      cex.lab=1.5,
       line=3,font.lab=2,xpd=NA)
 box(bty="l",lwd=4)
 axis(1,at=1:3,labels=1:3,lwd=4,font=2,cex.axis=1.5)
@@ -88,12 +89,13 @@ for (i in 1:nrow(Prop)){
 }
 text(AA$x,AA$y,AA$number,font=2,cex=1.3)
 
-par(mar=c(4.1,0.5,0,0))
+par(mar=c(6.1,0.5,0,0.1))
 plot.new()
 legend('topleft',legend=colnames(Prop)[c(5,3,4,8,6,7,9)],
        border="transparent",pch=15,
        col=thecol,bg=thecol,bty="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
-       x.intersp=1.5,y.intersp=5)
+       x.intersp=1.2,y.intersp=3.3,box.col="transparent")
+text(0.5,1.02,labels="NRML",font=2)
 par(op)
 par(def.par)
 

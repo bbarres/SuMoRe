@@ -212,7 +212,7 @@ axis(1,at=graf[c(2,5,8)],labels=FALSE, lwd=4)
 axis(2,at=seq(0,100,10),labels=seq(0,100,10),lwd=4,las=1,font=2,cex.axis=1.1)
 box(bty="l",lwd=4)
 mtext(levels(LEVEL)[c(1,3,2)],at=c(1.7,6.1,10.6),line=1.5,cex=1.5,side=1)
-mtext("Monitoring system category", at=6.1, line=3,cex=2,side=1,font=2,
+mtext("RMS category", at=6.1, line=3,cex=2,side=1,font=2,
       padj=1)
 legend(5,105,legend=c("Academic experts",
                       "Governmental experts",
