@@ -126,7 +126,7 @@ axis(1,at=graf[c(2,5,8)],labels=FALSE, lwd=4)
 axis(2,at=seq(0,70,10),labels=seq(0,70,10),lwd=4,las=1,font=2,cex.axis=1.1)
 box(bty="l",lwd=4)
 mtext(levels(LEVEL)[c(1,3,2)],at=c(1.7,6.1,10.6),line=1.5,cex=1.5,side=1)
-mtext("Monitoring system category",at=6.1,line=3,cex=2,side=1,font=2,padj=1)
+mtext("RMS category",at=6.1,line=3,cex=2,side=1,font=2,padj=1)
 legend(4,75,legend=c("Based on loss of efficacy",
                      "Based on PPP use",
                      "Randomly"),
@@ -162,7 +162,7 @@ axis(2,at=seq(0,70,10),labels=seq(0,70,10),lwd=4,las=1,font=2,cex.axis=1.1)
 box(bty="l",lwd=4)
 mtext(c("Academic","Governmental","Private"),at=graf[c(3,8,13)],
       line=1.5,cex=1.5,side=1)
-mtext("Monitoring system category", at=9.4,line=3,cex=2,side=1,
+mtext("RMS category", at=9.4,line=3,cex=2,side=1,
       font=2,padj=1)
 legend(8,75,legend=c("Not published","During cropping season",
                        "Yearly","Less frequently","Other"),
