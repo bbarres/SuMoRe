@@ -52,24 +52,24 @@ visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
 ##############################################################################/
 
 #the 3 plot combined
-op<-par(mfrow=c(1,3),mar=c(5.1,5,4.1,2.1))
+op<-par(mfrow=c(1,3),mar=c(5.1,5.3,4.1,2.1))
 visreg(IDHacad.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Academic",
        overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
-       ylab="Probability that an Academic\nmonitoring system exists",
+       ylab="Probability an Academic\nRMS exists",cex.lab=1.3,
        legend=FALSE,ylim=c(0,1),main=list("Academic RMS",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
 text(0.4,1.265,labels=c("A"),cex=4,xpd=TRUE,col="grey10")
 visreg(IDHpub.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Public",
        overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
-       ylab="Probability that a Governmental\nmonitoring system exists",
+       ylab="Probability a Governmental\nRMS exists",cex.lab=1.3,
        legend=FALSE,ylim=c(0,1),main=list("Governmental RMS",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
 text(0.4,1.265,labels=c("B"),cex=4,xpd=TRUE,col="grey10")
 visreg(IDHpriv.mod,"IDH",rug=2,scale="response",jitter=TRUE,by="Private",
        overlay=TRUE,partial=FALSE,xlab="HDI",font=2,font.lab=2,
-       ylab="Probability that a Private\nmonitoring system exists",
+       ylab="Probability a Private\nRMS exists",cex.lab=1.3,
        legend=FALSE,ylim=c(0,1),main=list("Private RMS",cex=2),
        line=list(col="black"),fill=list(col="grey70"))
 box()
