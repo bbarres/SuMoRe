@@ -216,6 +216,60 @@ par(def.par)
 #export to a pdf 6 x 5 inches
 
 
+
+##############################################################################/
+#Figure Box A: Continent vs composition of NRMLg####
+##############################################################################/
+
+colovec<-brewer.pal(7,"Dark2")[7:1]
+
+#formating the table necessary for the ploting
+IDH_coex<-table(data_pays$coexistence_pays,
+                data_pays$Indice.Dvpt.Humain_classes)
+#wer remove the NA class
+IDH_coex<-IDH_coex[-c(2),]
+colnames(IDH_coex)<-c("[0.5-0.6]","[0.6-0.7]","[0.7-0.8]",
+                      "[0.8-0.9]","[0.9-1]")
+row.names(IDH_coex)<-c("Academic","Academic\nPrivate",
+                       "Private","Academic\nGovernmental",
+                       "Governmental","Academic\nGovernmental\nPrivate",
+                       "Governmental\nPrivate")
+IDH_coex<-IDH_coex[c(3,1,5,7,4,2,6),]
+effectif<-colSums(IDH_coex)
+effectif
+IDH_coex<-prop.table(IDH_coex,margin=2)*100
+IDH_coex
+
+def.par<-par(no.readonly=TRUE)
+layout(cbind(1,2),widths=c(9,3))  #put legend on the right margin of the chart
+op<-par(mar=c(6.1,5.1,2,0))
+temp<-barplot(IDH_coex,col=colovec,border=NA,axes=FALSE,
+              axisnames=FALSE,space=0.7,xpd=FALSE)
+axis(1,at=temp,labels=FALSE,lwd=4,font=2,
+     cex.axis=1.1,padj=0.1,xpd=TRUE,las=1)
+text(temp,par("usr")[1]-10,labels=names(effectif),srt=25,
+     xpd=TRUE,cex=1.2,font=2)
+axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
+box(bty="l",lwd=4)
+title(main=NULL,xlab="HDI class",ylab="% of countries",cex.lab=2,
+      line=3.5,font.lab=2)
+text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[4],104,paste("n=",effectif[4],sep=""),font=3,cex=1.2,xpd=TRUE)
+text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
+
+par(mar=c(4.1,0.5,0,0))
+plot.new()
+legend('topleft',legend=row.names(IDH_coex),border="transparent",pch=15,
+       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
+       x.intersp=1.5,y.intersp=3.3)
+par(op)
+par(def.par)
+
+#export to a pdf 6 x 5 inches
+
+
 ##############################################################################/
 #END
 ##############################################################################/
