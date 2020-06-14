@@ -73,7 +73,7 @@ plot(AA$x,AA$y,pch=16,col="white",xlim=c(0.5,3.2),ylim=c(0.5,3.5),
      font.lab=2,asp=1)
 title(main=NULL,
       xlab="Number of RMS\ncategories in the country",
-      cex.lab=1.5,line=4,font.lab=2,xpd=NA)
+      cex.lab=1.5,line=4.5,font.lab=2,xpd=NA)
 title(main=NULL,ylab="Number of surveyed\npest types in the country",
       cex.lab=1.5,
       line=3,font.lab=2,xpd=NA)
