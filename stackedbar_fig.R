@@ -209,7 +209,7 @@ par(mar=c(4.1,0.5,0,0))
 plot.new()
 legend('topleft',legend=row.names(repond_pestcat)[6:1],border="transparent",
        pch=15,col=colovec[6:1],bg=colovec[6:1],bty ="n",horiz=FALSE,
-       cex=0.9,pt.cex=1.4,x.intersp=1.5,y.intersp=6)
+       cex=0.9,pt.cex=1.4,x.intersp=1.5,y.intersp=4)
 par(op)
 par(def.par)
 
