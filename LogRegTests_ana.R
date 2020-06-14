@@ -9,7 +9,7 @@ source("dataloading.R")
 
 
 ##############################################################################/
-#Logistic regression on the existence of the different type of monitoring####
+#Fig S1: Logistic regression IDH vs the different type of monitoring####
 ##############################################################################/
 
 #formating the data set for the regression
@@ -80,7 +80,7 @@ par(op)
 
 
 ##############################################################################/
-#Logistic regression on which tools are used to monitor PPP usage####
+#Figure S2: Logistic regression: which tools are used to monitor PPP usage####
 ##############################################################################/
 
 #formating the data set for the regression
