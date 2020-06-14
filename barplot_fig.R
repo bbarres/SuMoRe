@@ -22,7 +22,7 @@ names(VAR)<-c("Fungicide","Fungicide\nHerbicide\nInsecticide",
 VAR<-VAR[c(1,4,5,3,2)]
 
 #ploting the barplot
-op<-par(mar=c(8, 5, 2, 2) + 0.1,xpd=TRUE)
+op<-par(mar=c(8,5,2,2)+0.1,xpd=TRUE)
 graf<-barplot(VAR,space=0.8,col=thecol,ylim=c(0,70),
               ylab="Number of respondents",
               cex.axis =1.3,cex.lab=2,las=1,xaxt="n",
@@ -48,14 +48,14 @@ VAR<-as.table(c(106,68,76))
 names(VAR)<-c("Academic","Governmental","Private")
 
 #ploting the barplot
-op<-par(mar=c(6.5, 6.5, 2, 2) + 0.1,xpd=TRUE)
+op<-par(mar=c(8,6.5,2,2)+0.1,xpd=TRUE)
 graf<-barplot(VAR,space=2,col=thecol,ylim=c(0,120),
               ylab="Number of\nRMS described",
               cex.axis =1.3,cex.lab=2,las=1,xaxt="n",
               yaxt="n",bty="n",border=NA,font.lab=2)
 axis(1,at=graf[1:3],labels=FALSE,lwd=4)
 axis(2,at=seq(0,120,20),labels=seq(0,120,20),lwd=4,las=1,font=2,cex.axis=1.1)
-title(main=NULL,xlab="RMS category",cex.lab=2,line=4,font.lab=2)
+title(main=NULL,xlab="RMS category",cex.lab=2,line=6,font.lab=2)
 box(bty="l",lwd=4)
 text(labels=names(VAR),x=graf[1:5],y=rep(-12,5),cex=1.1,font=2,srt=0)
 par(op)
@@ -74,15 +74,15 @@ VAR<-as.table(c(39,26,32))
 names(VAR)<-c("Academic","Governmental","Private")
 
 #ploting the barplot
-op<-par(mar=c(6.5, 7.5, 2, 2) + 0.1,xpd=TRUE)
+op<-par(mar=c(8,7.5,2,2)+0.1,xpd=TRUE)
 graf<-barplot(VAR,space=2,col=thecol,ylim=c(0,50),
-              ylab="Number of countries with at
-least one RMS in this category",
+              ylab="Number of countries\nwith at least one RMS
+in this category",
               cex.axis =1.3,cex.lab=1.7,las=1,xaxt="n",
               yaxt="n",bty="n",border=NA,font.lab=2)
 axis(1,at=graf[1:3],labels=FALSE,lwd=4)
 axis(2,at=seq(0,50,10),labels=seq(0,50,10),lwd=4,las=1,font=2,cex.axis=1.1)
-title(main=NULL,xlab="RMS category",cex.lab=2,line=4,font.lab=2)
+title(main=NULL,xlab="RMS category",cex.lab=2,line=6,font.lab=2)
 box(bty="l",lwd=4)
 text(labels=names(VAR),x=graf[1:5],y=rep(-4.5,5),cex=1.1,font=2,srt=0)
 par(op)
