@@ -167,7 +167,7 @@ mtext("RMS category", at=9.4,line=3,cex=2,side=1,
 legend(8,75,legend=c("Not published","During cropping season",
                        "Yearly","Less frequently","Other"),
        pch=15,col=thecol,bg=thecol,bty="n",cex=1.3,pt.cex=1.6,xpd=TRUE,
-       ncol=1,x.intersp=1,y.intersp=2.5)
+       ncol=1,x.intersp=1,y.intersp=1.8)
 par(op)
 
 #export to a pdf 6 x 5 inches
