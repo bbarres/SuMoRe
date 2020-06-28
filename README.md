@@ -18,6 +18,7 @@ In this section, you will find the list of the datasets used in this study. The 
   + *coexistence_pays*: type of monitoring cited at least once by the survey's respondant. 
   + *Indice.Dvpt.Humain*: value of the Human Development Index (HDI) as of 2019. 
   + *Indice.Dvpt.Humain_classes*: the same information as HDI but grouped into classes of 0.1 bin. 
+  + *IDH_classes2*: the same information as HDI with 3 classes *[<0.8]*, *[0.8-0.9]* and *[0.9-1.0]*
   + *nb_bioagr_surv*: number of pests surveyed in the country according to the survey's respondant. 
   + *q136_q137_UsagePPP*: type of PPP usage monitoring. This could be made by monitoring sale, by a survey or by both. This is the combined information for all the respondant of one country. 
   

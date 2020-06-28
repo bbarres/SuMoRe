@@ -9,7 +9,7 @@ source("dataloading.R")
 
 
 ##############################################################################/
-#Figure 3A: relation between HDI and organization of reistance monitoring####
+#Figure 3A: relation between HDI & organization of resistance monitoring####
 ##############################################################################/
 
 colovec<-brewer.pal(7,"Dark2")[7:1]
