@@ -13,7 +13,7 @@ source("dataloading.R")
 #preparing the dataset####
 ##############################################################################/
 
-data<-data_pays[,c(1,2,5)]
+data<-data_pays[,c(1,2,6)]
 divCoex<-numeric(dim(data)[1])
 Modal<-levels(data$coexistence_pays)
 Number<-c(1,0,2,1,2,1,3,2)
@@ -74,7 +74,7 @@ plot(AA$x,AA$y,pch=16,col="white",xlim=c(0.5,3.2),ylim=c(0.5,3.5),
 title(main=NULL,
       xlab="Number of RMS\ncategories in the country",
       cex.lab=1.5,line=4.5,font.lab=2,xpd=NA)
-title(main=NULL,ylab="Number of surveyed\npest types in the country",
+title(main=NULL,ylab="Number of surveyed\nbioagressor types in the country",
       cex.lab=1.5,
       line=3,font.lab=2,xpd=NA)
 box(bty="l",lwd=4)
