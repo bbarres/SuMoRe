@@ -78,7 +78,7 @@ IDH_PPPsurv<-prop.table(IDH_PPPsurv,margin=2)*100
 IDH_PPPsurv
 
 def.par<-par(no.readonly=TRUE)
-layout(cbind(1,2),widths=c(9,2))  #put legend on a right margin of the chart
+layout(cbind(1,2),widths=c(9,3))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_PPPsurv,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
@@ -94,7 +94,7 @@ text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
 
-par(mar=c(4.1,0,0,0))
+par(mar=c(4.1,0.5,0,0))
 plot.new()
 legend('left',legend=row.names(IDH_PPPsurv),border="transparent",pch=15,
        col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
