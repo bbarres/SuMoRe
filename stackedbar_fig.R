@@ -192,7 +192,7 @@ text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
 title(main=NULL,xlab=list("RMS category",cex=2),
-      ylab=list("% of RMS",cex=2),
+      ylab=list("% of RMSs",cex=2),
       line=3.5,font.lab=2,xpd=NA)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)

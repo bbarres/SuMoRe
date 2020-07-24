@@ -50,7 +50,7 @@ names(VAR)<-c("Academic","Governmental","Private")
 #ploting the barplot
 op<-par(mar=c(8,6.5,2,2)+0.1,xpd=TRUE)
 graf<-barplot(VAR,space=2,col=thecol,ylim=c(0,120),
-              ylab="Number of\nRMS described",
+              ylab="Number of\nRMSs described",
               cex.axis =1.3,cex.lab=2,las=1,xaxt="n",
               yaxt="n",bty="n",border=NA,font.lab=2)
 axis(1,at=graf[1:3],labels=FALSE,lwd=4)

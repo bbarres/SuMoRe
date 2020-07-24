@@ -21,12 +21,11 @@ tmp$type_monitoring_par_repondant<-factor(tmp$type_monitoring_par_repondant,
                                                    "Private"))
 
 #here comes the code for the boxplot
-op<-par(mar=c(5.1,7,2.1,2.1),font.lab=2)
+op<-par(mar=c(5.1,7,2.1,1.1),font.lab=2)
 bx<-boxplot(tmp$q_nb_participant_choice~tmp$type_monitoring_par_repondant,
             horizontal=FALSE,col="transparent",border="transparent",
             xlab="RMS category",
-            ylab="Number of actor type paticipating
-to the choice of the topics", 
+            ylab="Number of actor types involved\nin the choice of topics", 
             las=1,cex.lab=1.7,cex=1.5,frame=FALSE,yaxt='n',xaxt='n',
             ylim=c(0,4.3),boxwex=0.3,lwd=0.9)
 box(lwd=4,lty=1,bty="l")
