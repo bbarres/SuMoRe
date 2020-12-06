@@ -78,7 +78,7 @@ IDH_PPPsurv<-prop.table(IDH_PPPsurv,margin=2)*100
 IDH_PPPsurv
 
 def.par<-par(no.readonly=TRUE)
-layout(cbind(1,2),widths=c(9,3))  #put legend on a right margin of the chart
+layout(cbind(1,2),widths=c(9,4))  #put legend on a right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_PPPsurv,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
@@ -97,8 +97,8 @@ text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
 par(mar=c(4.1,0.5,0,0))
 plot.new()
 legend('left',legend=row.names(IDH_PPPsurv),border="transparent",pch=15,
-       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
-       x.intersp=1.5,y.intersp=3.5)
+       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=1.2,pt.cex=1.4,
+       x.intersp=1.2,y.intersp=3.5)
 par(op)
 par(def.par)
 
@@ -128,8 +128,8 @@ PPPsurv_coex<-prop.table(PPPsurv_coex,margin=2)*100
 PPPsurv_coex
 
 def.par<-par(no.readonly=TRUE)
-layout(cbind(1,2),widths=c(9,3))  #put legend on a right margin of the chart
-op<-par(mar=c(6.1,5.1,2,0.1))
+layout(cbind(1,2),widths=c(9,4))  #put legend on a right margin of the chart
+op<-par(mar=c(6.1,5.1,2,0.7))
 temp<-barplot(PPPsurv_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
 axis(1,at=temp,labels=FALSE,lwd=4,font=2,
@@ -139,7 +139,7 @@ text(temp,par("usr")[1]-12,labels=names(effectif),srt=0,
 axis(2,lwd=4,font=2,cex.axis=1.2,las=1)
 box(bty="l",lwd=4)
 title(main=NULL,xlab="Source of PPP use data",ylab="% of countries",
-      cex.lab=2,line=3.5,font.lab=2,xpd=NA)
+      cex.lab=1.9,line=3.5,font.lab=2,xpd=NA)
 text(temp[1],104,paste("n=",effectif[1],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[2],104,paste("n=",effectif[2],sep=""),font=3,cex=1.2,xpd=TRUE)
 text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
@@ -149,8 +149,8 @@ text(temp[5],104,paste("n=",effectif[5],sep=""),font=3,cex=1.2,xpd=TRUE)
 par(mar=c(4.1,0.5,0,0))
 plot.new()
 legend('topleft',legend=row.names(PPPsurv_coex),border="transparent",pch=15,
-       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
-       x.intersp=1.5,y.intersp=3.3)
+       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=1.2,pt.cex=1.4,
+       x.intersp=1.2,y.intersp=2.7,xpd=TRUE)
 text(0.5,1.02,labels="NRML",font=2)
 par(op)
 par(def.par)
