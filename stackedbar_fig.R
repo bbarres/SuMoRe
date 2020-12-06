@@ -31,7 +31,7 @@ IDH_coex<-prop.table(IDH_coex,margin=2)*100
 IDH_coex
 
 def.par<-par(no.readonly=TRUE)
-layout(cbind(1,2),widths=c(9,3))  #put legend on the right margin of the chart
+layout(cbind(1,2),widths=c(9,4))  #put legend on the right margin of the chart
 op<-par(mar=c(6.1,5.1,2,0))
 temp<-barplot(IDH_coex,col=colovec,border=NA,axes=FALSE,
               axisnames=FALSE,space=1.5,xpd=FALSE)
@@ -50,8 +50,8 @@ text(temp[3],104,paste("n=",effectif[3],sep=""),font=3,cex=1.2,xpd=TRUE)
 par(mar=c(4.1,0.5,0,0))
 plot.new()
 legend('topleft',legend=row.names(IDH_coex),border="transparent",pch=15,
-       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=0.9,pt.cex=1.4,
-       x.intersp=1.5,y.intersp=3.3)
+       col=colovec,bg=colovec,bty ="n",horiz=FALSE,cex=1.2,pt.cex=1.4,
+       x.intersp=1.2,y.intersp=2.7,xpd=TRUE)
 text(0.5,1.02,labels="NRML",font=2)
 par(op)
 par(def.par)
