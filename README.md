@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/158614822.svg)](https://zenodo.org/badge/latestdoi/158614822)
 
-# Supporting data and code for: Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity
+# Supporting data and code for: Monitoring systems for resistance to plant protection products across the world: Between redundancy and complementarity
 *This repository contains the R code used for the data analyses and production of the figures of the related article*
 
 ![alt text](https://vy7bgw.db.files.1drv.com/y4mJcCXlpEQlZMq8mdAu7b8K9pAc2N3boQ0iHSWn7cREMnjbGu5gK6GN6kIKv2LL5keC8Owf4SR-42JjveGIyxCv_zIyeiYiNByIBwWocLjOE6ictf_lu-Sjv-hhGo5AMhAkOZydDdqd6wRrOgbOPYguZAP5y9CNEpH_q6z3i4Dj9Zvcyxzi3o-iXj5_cQLBi53AXTp6-cEPoKxU8n3vdG5OQ?width=1584&height=588&cropmode=none)
@@ -84,7 +84,7 @@ Benoit Barrès wrote the first draft of **dataloading.R**, **LogRegTests_ana.R**
 
 ## Citation
 You can cite cite the related study as follow: 
-+ R4P [Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity. *in preparation*.]()
++ R4P [Monitoring systems for resistance to plant protection products across the world: Between redundancy and complementarity. *Accepted for publication in Pest Management Science*.](https://www.biorxiv.org/content/10.1101/2020.07.30.228239v2)
 
 If you want to use (some of) the code found on this page or if you want to cite this repository: 
-+ Benoit Barrès, Christophe Plantamp and Pauline de Jerphanion. bbarres/SuMoRe: [Supporting data and code for: Picture of Plant Protection Products resistance monitoring over the world: Between diversity and complementarity. Zenodo; 2020.](https://zenodo.org/badge/latestdoi/158614822)
++ Benoit Barrès, Christophe Plantamp and Pauline de Jerphanion. bbarres/SuMoRe: [Supporting data and code for: Monitoring systems for resistance to plant protection products across the world: Between redundancy and complementarity. Zenodo; 2020.](https://zenodo.org/badge/latestdoi/158614822)
