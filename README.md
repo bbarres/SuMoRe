@@ -84,7 +84,7 @@ Benoit Barrès wrote the first draft of **dataloading.R**, **LogRegTests_ana.R**
 
 ## Citation
 You can cite cite the related study as follow: 
-+ R4P [Monitoring systems for resistance to plant protection products across the world: Between redundancy and complementarity. *Accepted for publication in Pest Management Science*.](https://www.biorxiv.org/content/10.1101/2020.07.30.228239v2)
++ R4P [Monitoring systems for resistance to plant protection products across the world: Between redundancy and complementarity. *Pest Management Science*, 77: 2697–2709, 2021. doi:10.1002/ps.6275.](https://onlinelibrary.wiley.com/doi/full/10.1002/ps.6275)
 
 If you want to use (some of) the code found on this page or if you want to cite this repository: 
 + Benoit Barrès, Christophe Plantamp and Pauline de Jerphanion. bbarres/SuMoRe: [Supporting data and code for: Monitoring systems for resistance to plant protection products across the world: Between redundancy and complementarity. Zenodo; 2020.](https://zenodo.org/badge/latestdoi/158614822)
